@@ -1,0 +1,2722 @@
+  [1m[35m (41.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (69.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "agrocashpundit_development"[0m
+  [1m[35m (72.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "agrocashpundit_test"[0m
+  [1m[35m (288.2ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_development" ENCODING = 'unicode'[0m
+  [1m[35m (114.0ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-27 16:12:09.231495"], ["updated_at", "2022-05-27 16:12:09.231495"]]
+  [1m[36mTRANSACTION (41.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220527161220)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527161220"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (41.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-05-27 13:21:52 -0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 398)
+Started GET "/" for ::1 at 2022-05-27 13:22:01 -0300
+Started GET "/" for ::1 at 2022-05-27 13:22:01 -0300
+Processing by PagesController#home as HTML
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Started GET "/" for ::1 at 2022-05-27 13:23:39 -0300
+  [1m[35m (23.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 290)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/public/packs
+[Webpacker] warning ../../../../package.json: No license field
+
+[Webpacker] Hash: 4e9cff1b0ba5ba0d4aa3
+Version: webpack 4.46.0
+Time: 3618ms
+Built at: 05/27/2022 1:24:02 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3c1a03207bdbade37653.js    483 KiB  application  [emitted] [immutable]  application
+js/application-3c1a03207bdbade37653.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3c1a03207bdbade37653.js js/application-3c1a03207bdbade37653.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 186 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 6.6ms | Allocations: 824)
+  Rendered shared/_flashes.html.erb (Duration: 1.8ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 22090.4ms | Allocations: 116988)
+Completed 200 OK in 22120ms (Views: 22099.8ms | ActiveRecord: 0.0ms | Allocations: 120617)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-27 13:24:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 192.9ms | Allocations: 27031)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 211.3ms | Allocations: 36887)
+Completed 200 OK in 300ms (Views: 216.3ms | ActiveRecord: 59.2ms | Allocations: 44763)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddresses (20220527165125)
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "city" character varying, "street" character varying, "number" character varying, "neighborhood" character varying, "cep" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527165125"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (43.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScoredata (20220527173657)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScoredata (20220527173657)
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScoredata (20220527173657)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScoredata (20220527173657)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScoredata (20220527174121)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (73.2ms)[0m  [1m[35mCREATE TABLE "scoredata" ("id" bigserial primary key, "annual_income" float, "culture" character varying, "ha_propriety" integer, "garantia" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_79722b676d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCREATE INDEX "index_scoredata_on_user_id" ON "scoredata" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527174121"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCultures (20220528144713)
+  [1m[36mTRANSACTION (42.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.4ms)[0m  [1m[35mCREATE TABLE "cultures" ("id" bigserial primary key, "name" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_47a158a105"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE INDEX "index_cultures_on_user_id" ON "cultures" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144713"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoanProposals (20220528144839)
+  [1m[36mTRANSACTION (44.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "loan_proposals" ("id" bigserial primary key, "conditions" character varying, "amount" float, "accepted" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_da8c7b0666"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_user_id" ON "loan_proposals" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144839"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRoleToUser (20220528145052)
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (37.9ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528145052"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-05-28 12:02:57 -0300
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.6ms | Allocations: 822)
+  Rendered shared/_flashes.html.erb (Duration: 2.4ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 1225.7ms | Allocations: 38723)
+Completed 200 OK in 1287ms (Views: 1249.8ms | ActiveRecord: 0.0ms | Allocations: 43247)
+
+
+Started GET "/" for ::1 at 2022-05-28 12:02:59 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 222)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 509.9ms | Allocations: 19477)
+Completed 200 OK in 566ms (Views: 557.8ms | ActiveRecord: 0.0ms | Allocations: 20045)
+
+
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-05-28 16:46:12 -0300
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.3ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 7.6ms | Allocations: 822)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 547.3ms | Allocations: 38604)
+Completed 200 OK in 617ms (Views: 565.6ms | ActiveRecord: 0.0ms | Allocations: 43128)
+
+
+Started GET "/" for ::1 at 2022-05-28 16:46:13 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 222)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 153.0ms | Allocations: 10327)
+Completed 200 OK in 157ms (Views: 155.4ms | ActiveRecord: 0.0ms | Allocations: 10895)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-28 16:46:19 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 147.5ms | Allocations: 19948)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 169.7ms | Allocations: 29819)
+Completed 200 OK in 230ms (Views: 173.6ms | ActiveRecord: 9.9ms | Allocations: 38149)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-28 16:46:28 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 151)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 7877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 92.5ms | Allocations: 18708)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.0ms | Allocations: 20360)
+
+
+Started POST "/users" for ::1 at 2022-05-28 16:46:38 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (55.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lucas@mail.com"], ["encrypted_password", "$2a$12$YPvVZLu0qvJ8xhFEDTk.sumlVS3LR71GqgI6ZmcfiOsQNaqjxBaYy"], ["created_at", "2022-05-28 19:46:39.896682"], ["updated_at", "2022-05-28 19:46:39.896682"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1722ms (ActiveRecord: 67.9ms | Allocations: 13635)
+
+
+Started GET "/" for ::1 at 2022-05-28 16:46:40 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 21.7ms | Allocations: 2215)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered layout layouts/application.html.erb (Duration: 96.2ms | Allocations: 12193)
+Completed 200 OK in 160ms (Views: 153.2ms | ActiveRecord: 4.3ms | Allocations: 12746)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLoanProposal Load (7.6ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" ORDER BY "loan_proposals"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLoanProposal Load (1.1ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" ORDER BY "loan_proposals"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLoanProposal Load (28.0ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" ORDER BY "loan_proposals"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLoanProposal Create (94.9ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conditions", "teste"], ["amount", 12.0], ["user_id", 1], ["created_at", "2022-05-28 19:54:58.095079"], ["updated_at", "2022-05-28 19:54:58.095079"]]
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLoanProposal Load (1.9ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" ORDER BY "loan_proposals"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLoanProposal Load (41.0ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLoanAccepteds (20220528214017)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (73.5ms)[0m  [1m[35mCREATE TABLE "loan_accepteds" ("id" bigserial primary key, "acepted" boolean, "user_id" bigint NOT NULL, "loan_proposal_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_192e57c382"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_bc58e6709b"
+FOREIGN KEY ("loan_proposal_id")
+  REFERENCES "loan_proposals" ("id")
+)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_user_id" ON "loan_accepteds" ("user_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_loan_proposal_id" ON "loan_accepteds" ("loan_proposal_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528214017"]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-05-30 11:06:43 -0300
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 113.8ms | Allocations: 8351)
+  Rendered shared/_flashes.html.erb (Duration: 4.4ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 451.4ms | Allocations: 46217)
+Completed 200 OK in 503ms (Views: 385.0ms | ActiveRecord: 86.0ms | Allocations: 50796)
+
+
+Started GET "/" for ::1 at 2022-05-30 11:06:44 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 32.6ms | Allocations: 3426)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 13141)
+Completed 200 OK in 81ms (Views: 76.8ms | ActiveRecord: 3.9ms | Allocations: 13728)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-30 11:06:47 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 104ms (ActiveRecord: 1.3ms | Allocations: 5069)
+
+
+Started GET "/" for ::1 at 2022-05-30 11:06:47 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 284)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 9990)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms | Allocations: 10545)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-30 11:06:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 1428)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 79.2ms | Allocations: 19828)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 102.9ms | Allocations: 29898)
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.0ms | Allocations: 31830)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-30 11:07:00 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas.redes.ferreira@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas.redes.ferreira@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 33ms (ActiveRecord: 1.6ms | Allocations: 2369)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas.redes.ferreira@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 9219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 130)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 18941)
+Completed 200 OK in 351ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 20475)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-30 11:07:06 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas.redes.ferreira@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas.redes.ferreira@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 11ms (ActiveRecord: 1.3ms | Allocations: 1997)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas.redes.ferreira@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 9018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 123)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 83.9ms | Allocations: 18594)
+Completed 200 OK in 370ms (Views: 84.6ms | ActiveRecord: 0.0ms | Allocations: 19255)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-30 11:07:09 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 151)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 7835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 17688)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms | Allocations: 19389)
+
+
+Started POST "/users" for ::1 at 2022-05-30 11:07:18 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joao@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "joao@mail.com"], ["encrypted_password", "$2a$12$Vq.J7U8vDh3uOLh0UXB1FOftNPe/lBnACTCFQkYUgwUxDhtv1Kj.G"], ["created_at", "2022-05-30 14:07:19.225374"], ["updated_at", "2022-05-30 14:07:19.225374"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 596ms (ActiveRecord: 10.5ms | Allocations: 8841)
+
+
+Started GET "/" for ::1 at 2022-05-30 11:07:19 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 6.3ms | Allocations: 1695)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 11391)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.7ms | Allocations: 11957)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-30 11:07:22 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms | Allocations: 2243)
+
+
+Started GET "/" for ::1 at 2022-05-30 11:07:22 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 201)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 9753)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 10233)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:07:32 -0300
+  [1m[35m (84.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.6ms | Allocations: 819)
+  Rendered shared/_flashes.html.erb (Duration: 2.4ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 485.6ms | Allocations: 38691)
+Completed 200 OK in 524ms (Views: 499.6ms | ActiveRecord: 0.0ms | Allocations: 43271)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:07:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 222)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 9916)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 10499)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:07:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 659)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 121.0ms | Allocations: 20126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 147.0ms | Allocations: 30256)
+Completed 200 OK in 214ms (Views: 153.2ms | ActiveRecord: 6.0ms | Allocations: 38737)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:07:57 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (42.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 389ms (ActiveRecord: 43.6ms | Allocations: 8695)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:07:58 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | Allocations: 1748)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 11664)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 1.1ms | Allocations: 12229)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:09:37 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:10:14 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/" for ::1 at 2022-05-31 13:10:16 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 25.0ms | Allocations: 7078)
+  Rendered shared/_flashes.html.erb (Duration: 2.5ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 17830)
+Completed 200 OK in 79ms (Views: 66.1ms | ActiveRecord: 7.5ms | Allocations: 20170)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:15:09 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 6.2ms | Allocations: 8363)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:15:09 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 278)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 10342)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms | Allocations: 11255)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:18:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 1281)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 11114)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 548)
+  Rendered shared/_flashes.html.erb (Duration: 1.5ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 22308)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.0ms | Allocations: 24455)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:18:35 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 370ms (ActiveRecord: 2.0ms | Allocations: 5933)
+
+
+  
+NameError (undefined local variable or method `users_profile_path' for #<Devise::SessionsController:0x0000000000fb40>
+Did you mean?  user_profile_path
+               user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:19:03 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 536ms (ActiveRecord: 14.9ms | Allocations: 7965)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profle", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:19:14 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.8ms | Allocations: 9515)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 196)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 86.8ms | Allocations: 19650)
+Completed 200 OK in 92ms (Views: 88.5ms | ActiveRecord: 0.0ms | Allocations: 20642)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:19:17 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.0ms | Allocations: 9477)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 202)
+  Rendered shared/_flashes.html.erb (Duration: 1.0ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 220.9ms | Allocations: 19341)
+Completed 200 OK in 256ms (Views: 228.5ms | ActiveRecord: 9.9ms | Allocations: 25326)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:19:25 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 320ms (ActiveRecord: 1.5ms | Allocations: 3057)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profle", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:21:19 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 45.4ms | Allocations: 9484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 202)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 162.9ms | Allocations: 19629)
+Completed 200 OK in 255ms (Views: 175.8ms | ActiveRecord: 47.1ms | Allocations: 25614)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:21:22 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 9126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 9.6ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 18731)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 19502)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:21:27 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 2.8ms | Allocations: 3016)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profile", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:21:52 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.1ms | Allocations: 9484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 202)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 56.9ms | Allocations: 19624)
+Completed 200 OK in 82ms (Views: 59.4ms | ActiveRecord: 5.4ms | Allocations: 25604)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:21:55 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 9126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 18731)
+Completed 200 OK in 67ms (Views: 66.2ms | ActiveRecord: 0.0ms | Allocations: 19502)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:22:00 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 1.6ms | Allocations: 3033)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profile", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:22:39 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 752ms (ActiveRecord: 9.7ms | Allocations: 7922)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profile", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started GET "/" for ::1 at 2022-05-31 13:23:17 -0300
+  [1m[35m (32.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.9ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 819)
+  Rendered shared/_flashes.html.erb (Duration: 3.2ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 356.0ms | Allocations: 38697)
+Completed 200 OK in 427ms (Views: 384.3ms | ActiveRecord: 0.0ms | Allocations: 43281)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:23:21 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 137.5ms | Allocations: 20116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 155.7ms | Allocations: 29972)
+Completed 200 OK in 187ms (Views: 158.9ms | ActiveRecord: 5.9ms | Allocations: 38427)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:23:26 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 328ms (ActiveRecord: 2.4ms | Allocations: 5031)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profile", :controller=>"pages"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/application_controller.rb:11:in `after_sign_in_path_for'
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:24:08 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.2ms | Allocations: 9485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 202)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 19625)
+Completed 200 OK in 114ms (Views: 85.3ms | ActiveRecord: 12.2ms | Allocations: 25619)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:24:10 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 9126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 18732)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.0ms | Allocations: 19519)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:24:24 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 318ms (ActiveRecord: 1.0ms | Allocations: 4195)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:24:24 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:24:42 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Redirected to 
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 7.9ms | Allocations: 7437)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+actionpack (6.1.6) lib/action_controller/metal/redirecting.rb:60:in `redirect_to'
+actionpack (6.1.6) lib/action_controller/metal/flash.rb:58:in `redirect_to'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:66:in `block in redirect_to'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:65:in `redirect_to'
+turbolinks (5.2.1) lib/turbolinks/redirection.rb:12:in `redirect_to'
+devise (4.8.1) app/controllers/devise_controller.rb:116:in `require_no_authentication'
+activesupport (6.1.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.6) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.6) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.6) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.6) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.6) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.6) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-05-31 13:24:46 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 9.0ms | Allocations: 1772)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 11840)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 1.8ms | Allocations: 12756)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:24:49 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 1.0ms | Allocations: 3229)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:24:49 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 227)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 9926)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms | Allocations: 10476)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:24:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.8ms | Allocations: 10347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 20587)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms | Allocations: 21571)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:24:59 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 500 Internal Server Error in 308ms (ActiveRecord: 1.0ms | Allocations: 2869)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+actionpack (6.1.6) lib/action_controller/metal/rendering.rb:35:in `render'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+/Users/lucasferreira/.rbenv/versions/3.0.3/lib/ruby/3.0.0/benchmark.rb:308:in `realtime'
+activesupport (6.1.6) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:86:in `cleanup_view_runtime'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:45:in `render'
+responders (3.0.1) lib/action_controller/responder.rb:240:in `default_render'
+responders (3.0.1) lib/action_controller/responder.rb:172:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:23:in `create'
+actionpack (6.1.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-05-31 13:25:37 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 819)
+  Rendered shared/_flashes.html.erb (Duration: 1.9ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 467.3ms | Allocations: 38600)
+Completed 200 OK in 501ms (Views: 478.8ms | ActiveRecord: 0.0ms | Allocations: 43184)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:25:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 201.6ms | Allocations: 20127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.8ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 227.0ms | Allocations: 29983)
+Completed 200 OK in 291ms (Views: 230.5ms | ActiveRecord: 26.8ms | Allocations: 38438)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:25:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 500 Internal Server Error in 365ms (ActiveRecord: 2.2ms | Allocations: 5410)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+actionpack (6.1.6) lib/action_controller/metal/rendering.rb:35:in `render'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:46:in `block (2 levels) in render'
+/Users/lucasferreira/.rbenv/versions/3.0.3/lib/ruby/3.0.0/benchmark.rb:308:in `realtime'
+activesupport (6.1.6) lib/active_support/core_ext/benchmark.rb:14:in `ms'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:46:in `block in render'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:86:in `cleanup_view_runtime'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:34:in `cleanup_view_runtime'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:45:in `render'
+responders (3.0.1) lib/action_controller/responder.rb:240:in `default_render'
+responders (3.0.1) lib/action_controller/responder.rb:172:in `to_html'
+responders (3.0.1) lib/action_controller/responder.rb:165:in `respond'
+responders (3.0.1) lib/action_controller/responder.rb:158:in `call'
+responders (3.0.1) lib/action_controller/respond_with.rb:213:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:23:in `create'
+actionpack (6.1.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.6) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:27:10 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 382ms (ActiveRecord: 10.6ms | Allocations: 9348)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:27:10 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:28:05 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2022-05-31 13:28:11 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 25.5ms | Allocations: 6747)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 134.3ms | Allocations: 16817)
+Completed 200 OK in 147ms (Views: 133.8ms | ActiveRecord: 7.6ms | Allocations: 18386)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:28:11 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 14.2ms | Allocations: 1695)
+  Rendered shared/_flashes.html.erb (Duration: 1.4ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 11380)
+Completed 200 OK in 71ms (Views: 62.8ms | ActiveRecord: 1.7ms | Allocations: 11934)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:28:15 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 1.2ms | Allocations: 3626)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:28:15 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 227)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 9926)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 10477)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:28:16 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 9664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 20470)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.0ms | Allocations: 21460)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:28:23 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 346ms (ActiveRecord: 1.8ms | Allocations: 3016)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:28:24 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2022-05-31 13:29:18 -0300
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 39.4ms | Allocations: 8352)
+  Rendered shared/_flashes.html.erb (Duration: 1.6ms | Allocations: 231)
+  Rendered layout layouts/application.html.erb (Duration: 565.8ms | Allocations: 46252)
+Completed 200 OK in 606ms (Views: 563.1ms | ActiveRecord: 15.7ms | Allocations: 50845)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:29:21 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 1.0ms | Allocations: 4683)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:29:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 285)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 9983)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 10534)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:29:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 882)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 128.5ms | Allocations: 20135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 154.2ms | Allocations: 30246)
+Completed 200 OK in 165ms (Views: 161.3ms | ActiveRecord: 0.0ms | Allocations: 32383)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:29:38 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 314ms (ActiveRecord: 1.2ms | Allocations: 5433)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:29:39 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms | Allocations: 2215)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pages_controller.rb:8:in `profile'
+Started GET "/users/1" for ::1 at 2022-05-31 13:29:57 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 4.0ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 360)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 10642)
+Completed 200 OK in 71ms (Views: 39.4ms | ActiveRecord: 9.4ms | Allocations: 18725)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:30:02 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:30:06 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 67)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 330)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 10333)
+Completed 200 OK in 59ms (Views: 34.3ms | ActiveRecord: 4.0ms | Allocations: 12416)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:30:08 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:30:09 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 10195)
+Completed 200 OK in 39ms (Views: 28.0ms | ActiveRecord: 1.2ms | Allocations: 12085)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:30:56 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 10030)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 1.1ms | Allocations: 11898)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:30:58 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:31:26 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:31:31 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 8.5ms | Allocations: 6984)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:31:31 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 359)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 10506)
+Completed 200 OK in 38ms (Views: 31.2ms | ActiveRecord: 0.9ms | Allocations: 13001)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:31:32 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 9916)
+Completed 200 OK in 39ms (Views: 27.6ms | ActiveRecord: 2.3ms | Allocations: 11991)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:31:33 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 10190)
+Completed 200 OK in 41ms (Views: 33.5ms | ActiveRecord: 0.9ms | Allocations: 12056)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:31:36 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:32:25 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 10192)
+Completed 200 OK in 50ms (Views: 37.6ms | ActiveRecord: 1.7ms | Allocations: 12171)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:32:26 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 9917)
+Completed 200 OK in 96ms (Views: 34.0ms | ActiveRecord: 2.3ms | Allocations: 11783)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:32:27 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.4ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 323)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 9918)
+Completed 200 OK in 100ms (Views: 26.0ms | ActiveRecord: 0.9ms | Allocations: 11803)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:34:33 -0300
+  [1m[35m (43.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 21.5ms | Allocations: 5238)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 5400)
+Completed 500 Internal Server Error in 82ms (ActiveRecord: 9.3ms | Allocations: 17399)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_address_path' for #<ActionView::Base:0x0000000000a3e8>
+Did you mean?  user_address_path):
+    1: <h1> Profile Page <%= current_user.email %></h1>
+    2: 
+    3: <%= link_to 'New Address', new_address_path  %>
+  
+app/views/pages/profile.html.erb:3
+Started GET "/" for ::1 at 2022-05-31 13:34:41 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 20.1ms | Allocations: 2211)
+  Rendered shared/_flashes.html.erb (Duration: 3.2ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 485.4ms | Allocations: 39747)
+Completed 200 OK in 489ms (Views: 484.0ms | ActiveRecord: 3.5ms | Allocations: 40475)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:34:41 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 10.9ms | Allocations: 1521)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 11062)
+Completed 200 OK in 77ms (Views: 72.3ms | ActiveRecord: 2.7ms | Allocations: 11542)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:34:44 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 1.4ms | Allocations: 4724)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:34:44 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 284)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 10264)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 10814)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:34:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 653)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 119.0ms | Allocations: 20076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 145.0ms | Allocations: 30244)
+Completed 200 OK in 159ms (Views: 152.4ms | ActiveRecord: 0.0ms | Allocations: 32364)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:35:02 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.7ms | Allocations: 9161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 84.8ms | Allocations: 18766)
+Completed 200 OK in 91ms (Views: 89.2ms | ActiveRecord: 0.0ms | Allocations: 19554)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:35:08 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 346ms (ActiveRecord: 1.0ms | Allocations: 7073)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:35:09 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4551)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4660)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 6692)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_address_path' for #<ActionView::Base:0x0000000000af00>
+Did you mean?  user_address_path):
+    1: <h1> Profile Page <%= current_user.email %></h1>
+    2: 
+    3: <%= link_to 'New Address', new_address_path  %>
+  
+app/views/pages/profile.html.erb:3
+Started GET "/users/1" for ::1 at 2022-05-31 13:35:41 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 21.6ms | Allocations: 4634)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4760)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.9ms | Allocations: 7569)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_address_path' for #<ActionView::Base:0x0000000000b2c0>
+Did you mean?  user_address_path):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_address_path  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2022-05-31 13:36:43 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.9ms | Allocations: 231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 722)
+  Rendered shared/_flashes.html.erb (Duration: 3.0ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 11636)
+Completed 200 OK in 56ms (Views: 46.4ms | ActiveRecord: 2.0ms | Allocations: 14703)
+
+
+Started GET "/users/1/address/new" for ::1 at 2022-05-31 13:36:45 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1/address/new" for ::1 at 2022-05-31 13:38:08 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/address/new"):
+  
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:38:15 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 9.8ms | Allocations: 6995)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:38:16 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 21.3ms | Allocations: 4381)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 4506)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms | Allocations: 6944)
+
+
+  
+ActionView::Template::Error (undefined method `new_user_address_path' for #<ActionView::Base:0x0000000000e268>
+Did you mean?  new_address_path):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path(current_user)  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/" for ::1 at 2022-05-31 13:38:16 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 7.2ms | Allocations: 1740)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 11841)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 1.1ms | Allocations: 12527)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:38:18 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 5.8ms | Allocations: 1508)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 11047)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 1.2ms | Allocations: 11522)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:38:20 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms | Allocations: 2457)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:38:20 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 9768)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 10245)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:38:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 697)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 11233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 21342)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 23168)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:38:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 9126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 18929)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 19701)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:38:31 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 315ms (ActiveRecord: 1.3ms | Allocations: 3909)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:38:31 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 15.9ms | Allocations: 4380)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4487)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.8ms | Allocations: 6313)
+
+
+  
+ActionView::Template::Error (undefined method `new_user_address_path' for #<ActionView::Base:0x0000000000e7e0>
+Did you mean?  new_address_path):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path(current_user)  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2022-05-31 13:38:47 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 735)
+  Rendered shared/_flashes.html.erb (Duration: 1.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 11628)
+Completed 200 OK in 52ms (Views: 40.9ms | ActiveRecord: 1.2ms | Allocations: 14474)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:40:46 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 332)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 10026)
+Completed 200 OK in 49ms (Views: 36.7ms | ActiveRecord: 1.0ms | Allocations: 12106)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:40:48 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:45:23 -0300
+  [1m[35m (42.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/" for ::1 at 2022-05-31 13:45:28 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 39.8ms | Allocations: 8535)
+  Rendered shared/_flashes.html.erb (Duration: 8.2ms | Allocations: 223)
+  Rendered layout layouts/application.html.erb (Duration: 492.0ms | Allocations: 46049)
+Completed 200 OK in 615ms (Views: 492.8ms | ActiveRecord: 15.7ms | Allocations: 49689)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:45:29 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 10.1ms | Allocations: 1710)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 26)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 11398)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 2.4ms | Allocations: 11959)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:45:32 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 3.7ms | Allocations: 4683)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:45:32 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 284)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 9988)
+Completed 200 OK in 113ms (Views: 112.3ms | ActiveRecord: 0.0ms | Allocations: 10538)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:45:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 9730)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 10202)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:45:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 1475)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 81.8ms | Allocations: 19786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 105.1ms | Allocations: 29779)
+Completed 200 OK in 118ms (Views: 109.9ms | ActiveRecord: 0.0ms | Allocations: 31903)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:45:41 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (45.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 973ms (ActiveRecord: 45.9ms | Allocations: 5078)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:45:42 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.8ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 333)
+  Rendered shared/_flashes.html.erb (Duration: 2.8ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 10244)
+Completed 200 OK in 192ms (Views: 32.1ms | ActiveRecord: 41.8ms | Allocations: 22720)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:45:44 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:47:47 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:47:49 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:47:49 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/address/new" for ::1 at 2022-05-31 13:47:50 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:52 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 359)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 10479)
+Completed 200 OK in 100ms (Views: 52.2ms | ActiveRecord: 16.1ms | Allocations: 23230)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:54 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 9902)
+Completed 200 OK in 34ms (Views: 25.8ms | ActiveRecord: 1.6ms | Allocations: 12021)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:54 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 4.8ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 9902)
+Completed 200 OK in 69ms (Views: 45.3ms | ActiveRecord: 2.2ms | Allocations: 11800)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:55 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.3ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 10179)
+Completed 200 OK in 87ms (Views: 77.2ms | ActiveRecord: 1.3ms | Allocations: 12097)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:56 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 9946)
+Completed 200 OK in 34ms (Views: 23.9ms | ActiveRecord: 1.0ms | Allocations: 11843)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:47:58 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 10134)
+Completed 200 OK in 61ms (Views: 46.0ms | ActiveRecord: 1.4ms | Allocations: 12032)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:47:59 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:48:02 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 10179)
+Completed 200 OK in 41ms (Views: 29.8ms | ActiveRecord: 0.9ms | Allocations: 12080)
+
+
+Started GET "/address/new" for ::1 at 2022-05-31 13:48:06 -0300
+  
+ActionController::RoutingError (uninitialized constant AddressController
+Did you mean?  AddressesController):
+  
+Started GET "/users/1" for ::1 at 2022-05-31 13:48:07 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.3ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 10178)
+Completed 200 OK in 42ms (Views: 26.8ms | ActiveRecord: 2.9ms | Allocations: 12173)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:51:09 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1453)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 10.6ms | Allocations: 14914)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"address", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/" for ::1 at 2022-05-31 13:51:16 -0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for ::1 at 2022-05-31 13:51:20 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 12.4ms | Allocations: 2081)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 12774)
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 1.3ms | Allocations: 13401)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:51:24 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 3.4ms | Allocations: 2897)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:51:24 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 225)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 10189)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 10702)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:51:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 640)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.1ms | Allocations: 11226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 21056)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms | Allocations: 22890)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:51:32 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 321ms (ActiveRecord: 1.4ms | Allocations: 4006)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:51:32 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1293)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms | Allocations: 3155)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"address", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:53:15 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 57ms (ActiveRecord: 10.1ms | Allocations: 9389)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:53:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 7.0ms | Allocations: 765)
+  Rendered shared/_flashes.html.erb (Duration: 2.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 325.5ms | Allocations: 38537)
+Completed 200 OK in 350ms (Views: 336.2ms | ActiveRecord: 0.0ms | Allocations: 42098)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:53:22 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 189)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 9731)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 10268)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:53:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 658)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 109.4ms | Allocations: 20005)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 145.1ms | Allocations: 30116)
+Completed 200 OK in 160ms (Views: 154.6ms | ActiveRecord: 0.0ms | Allocations: 32327)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:53:34 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 652ms (ActiveRecord: 1.2ms | Allocations: 5463)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:53:35 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1359)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1480)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 16.4ms | Allocations: 8789)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"address", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/" for ::1 at 2022-05-31 13:55:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 49.9ms | Allocations: 1729)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 380.2ms | Allocations: 11706)
+Completed 200 OK in 390ms (Views: 381.1ms | ActiveRecord: 4.9ms | Allocations: 12280)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:55:38 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 15.3ms | Allocations: 1521)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 91.5ms | Allocations: 11064)
+Completed 200 OK in 121ms (Views: 117.6ms | ActiveRecord: 1.5ms | Allocations: 11539)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 13:55:44 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 54ms (ActiveRecord: 3.8ms | Allocations: 5342)
+
+
+Started GET "/" for ::1 at 2022-05-31 13:55:44 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 213)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 9911)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 10461)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 13:55:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.1ms | Allocations: 10004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 30.5ms | Allocations: 149)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 19632)
+Completed 200 OK in 149ms (Views: 147.4ms | ActiveRecord: 0.0ms | Allocations: 20349)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 13:55:52 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 318ms (ActiveRecord: 3.2ms | Allocations: 2885)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 13:55:53 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1186)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1293)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms | Allocations: 3150)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"address", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path  %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2022-05-31 13:56:55 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1445)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.5ms | Allocations: 4263)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"address", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path %>
+  
+app/views/pages/profile.html.erb:2
+Started PUT "/__web_console/repl_sessions/b3d1050fefdb61be6bba3f0597b4ae77" for ::1 at 2022-05-31 13:57:15 -0300
+Started PUT "/__web_console/repl_sessions/b3d1050fefdb61be6bba3f0597b4ae77" for ::1 at 2022-05-31 13:57:16 -0300
+Started GET "/users/1" for ::1 at 2022-05-31 14:00:39 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1284)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1409)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 14.4ms | Allocations: 14863)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"addresses", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/" for ::1 at 2022-05-31 14:03:06 -0300
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.9ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 134.4ms | Allocations: 8350)
+  Rendered shared/_flashes.html.erb (Duration: 2.5ms | Allocations: 231)
+  Rendered layout layouts/application.html.erb (Duration: 715.6ms | Allocations: 46292)
+Completed 200 OK in 785ms (Views: 700.0ms | ActiveRecord: 37.1ms | Allocations: 50886)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 14:03:11 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 137ms (ActiveRecord: 16.4ms | Allocations: 4723)
+
+
+Started GET "/" for ::1 at 2022-05-31 14:03:12 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 10.6ms | Allocations: 285)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 9985)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 10537)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 14:03:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.5ms | Allocations: 786)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 130.8ms | Allocations: 20159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 181.9ms | Allocations: 30289)
+Completed 200 OK in 197ms (Views: 192.7ms | ActiveRecord: 0.0ms | Allocations: 32411)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 14:03:21 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 511ms (ActiveRecord: 2.7ms | Allocations: 5429)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 14:03:22 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1358)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1478)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 16.4ms | Allocations: 8749)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"addresses", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2022-05-31 14:05:24 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.8ms | Allocations: 97)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.5ms | Allocations: 759)
+  Rendered shared/_flashes.html.erb (Duration: 5.7ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 218.9ms | Allocations: 11563)
+Completed 200 OK in 269ms (Views: 234.0ms | ActiveRecord: 6.0ms | Allocations: 14681)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 14:05:31 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1446)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.4ms | Allocations: 4499)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"addresses", :id=>"1"}, missing required keys: [:user_id]
+Did you mean?  new_user_address_url):
+    1: <h1> Profle Page</h1>
+    2: <%= link_to 'New Address', new_user_address_path %>
+  
+app/views/pages/profile.html.erb:2
+Started GET "/users/1" for ::1 at 2022-05-31 14:05:47 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.8ms | Allocations: 218)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.3ms | Allocations: 721)
+  Rendered shared/_flashes.html.erb (Duration: 6.2ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 122.9ms | Allocations: 11610)
+Completed 200 OK in 142ms (Views: 128.4ms | ActiveRecord: 4.9ms | Allocations: 14732)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:05:50 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms | Allocations: 2330)
+
+
+  
+RuntimeError ():
+  
+app/controllers/addresses_controller.rb:9:in `new'
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:05:59 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 98)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 399)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 94.0ms | Allocations: 10536)
+Completed 200 OK in 208ms (Views: 103.8ms | ActiveRecord: 22.0ms | Allocations: 24310)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:24:23 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.2ms | Allocations: 769)
+  Rendered shared/_flashes.html.erb (Duration: 2.8ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 235.4ms | Allocations: 11373)
+Completed 200 OK in 718ms (Views: 249.6ms | ActiveRecord: 191.2ms | Allocations: 28164)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-31 14:24:27 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 1.8ms | Allocations: 2942)
+
+
+Started GET "/" for ::1 at 2022-05-31 14:24:27 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 26.0ms | Allocations: 275)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 175.4ms | Allocations: 10281)
+Completed 200 OK in 188ms (Views: 185.1ms | ActiveRecord: 0.0ms | Allocations: 11715)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-31 14:24:31 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.0ms | Allocations: 541)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 90.7ms | Allocations: 11221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 187)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 198.8ms | Allocations: 21049)
+Completed 200 OK in 212ms (Views: 207.1ms | ActiveRecord: 0.0ms | Allocations: 22927)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-31 14:24:46 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1200ms (ActiveRecord: 2.1ms | Allocations: 4009)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 14:24:47 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.9ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 333)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 10302)
+Completed 200 OK in 629ms (Views: 47.9ms | ActiveRecord: 122.5ms | Allocations: 16884)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:24:50 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 336)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 10086)
+Completed 200 OK in 82ms (Views: 40.3ms | ActiveRecord: 5.2ms | Allocations: 12707)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 14:24:58 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 51)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.7ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 9907)
+Completed 200 OK in 40ms (Views: 27.3ms | ActiveRecord: 3.4ms | Allocations: 11804)
+
+
+Started GET "/users/1" for ::1 at 2022-05-31 14:25:23 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 4.6ms | Allocations: 116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 359)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 147.3ms | Allocations: 10492)
+Completed 200 OK in 743ms (Views: 247.8ms | ActiveRecord: 179.0ms | Allocations: 23480)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:25:27 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.4ms | Allocations: 3587)
+
+
+  
+Pundit::NotAuthorizedError (not allowed to new? this Address):
+  
+app/controllers/addresses_controller.rb:10:in `new'
+Started GET "/users/1/addresses/new" for ::1 at 2022-05-31 14:25:33 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/agrocash/agrocashpundit/app/controllers/application_controller.rb:3)
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.2ms | Allocations: 399)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 172.9ms | Allocations: 10447)
+Completed 200 OK in 606ms (Views: 180.1ms | ActiveRecord: 151.6ms | Allocations: 23553)
+
+
