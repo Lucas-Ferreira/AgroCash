@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :loan_proposals
   has_many :loan_accepteds, through: :loan_proposals
-  belongs_to :address
+
 end
