@@ -3064,3 +3064,78 @@ Started GET "/loan_proposal/new.1" for ::1 at 2022-06-01 09:10:52 -0300
 ActionController::RoutingError (uninitialized constant LoanProposalController
 Did you mean?  LoanProposalsController):
   
+Started GET "/" for ::1 at 2022-06-02 15:01:19 -0300
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 10.1ms | Allocations: 822)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 2319.1ms | Allocations: 71056)
+Completed 200 OK in 2386ms (Views: 2335.8ms | ActiveRecord: 0.0ms | Allocations: 77048)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:03:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 13.6ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 1.9ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 115.0ms | Allocations: 11239)
+Completed 200 OK in 211ms (Views: 157.2ms | ActiveRecord: 0.0ms | Allocations: 12802)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:03:41 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 630)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 138.7ms | Allocations: 11244)
+Completed 200 OK in 152ms (Views: 148.6ms | ActiveRecord: 0.0ms | Allocations: 12735)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:03:51 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 7.1ms | Allocations: 99)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 2.3ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 125.2ms | Allocations: 11354)
+Completed 200 OK in 139ms (Views: 134.7ms | ActiveRecord: 0.0ms | Allocations: 12860)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:05:41 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.2ms | Allocations: 134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 19.6ms | Allocations: 628)
+  Rendered shared/_flashes.html.erb (Duration: 2.2ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 181.0ms | Allocations: 11275)
+Completed 200 OK in 268ms (Views: 222.1ms | ActiveRecord: 0.0ms | Allocations: 12777)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:05:57 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.8ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 4.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 99.4ms | Allocations: 11365)
+Completed 200 OK in 111ms (Views: 108.6ms | ActiveRecord: 0.0ms | Allocations: 12855)
+
+
