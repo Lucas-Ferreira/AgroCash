@@ -8,4 +8,9 @@ class PagesController < ApplicationController
     @user = current_user
     @address = Address.new
   end
+
+  def status
+    raise
+    @loan_proposal = LoanProposal.find(params[id])
+  end
 end

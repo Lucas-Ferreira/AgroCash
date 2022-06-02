@@ -2,5 +2,6 @@
 <%= simple_form_for [@loan_proposal] do |f| %>
   <%= f.input :amount %>
   <%= f.input :conditions, :collection => ["12x", "24x", "48x"] %>
+  <%= f.input :description %>
   <%= f.submit %>
 <% end %>

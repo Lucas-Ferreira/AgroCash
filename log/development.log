@@ -3911,3 +3911,244 @@ Migrating to AddDescriptionsToLoanProposals (20220602001817)
   [1m[36mActiveRecord::InternalMetadata Load (48.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
   [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-01 21:40:33 -0300
+  [1m[35m (35.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 134.5ms | Allocations: 12078)
+  Rendered layout layouts/application.html.erb (Duration: 136.5ms | Allocations: 12202)
+Completed 500 Internal Server Error in 1180ms (ActiveRecord: 16.0ms | Allocations: 24054)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<LoanProposal id: nil, conditions: nil, amount: nil, accepted: nil, user_id: nil, created_at: nil, updated_at: nil>):
+    2: <%= simple_form_for [@loan_proposal] do |f| %>
+    3:   <%= f.input :amount %>
+    4:   <%= f.input :conditions, :collection => ["12x", "24x", "48x"] %>
+    5:   <%= f.input :description %>
+    6:   <%= f.submit %>
+    7: <% end %>
+  
+app/views/loan_proposals/new.html.erb:5
+app/views/loan_proposals/new.html.erb:2
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-01 21:43:41 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 187.5ms | Allocations: 11858)
+  Rendered layout layouts/application.html.erb (Duration: 190.6ms | Allocations: 11982)
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 9.9ms | Allocations: 15088)
+
+
+  
+ActionView::Template::Error (undefined method `description' for #<LoanProposal id: nil, conditions: nil, amount: nil, accepted: nil, user_id: nil, created_at: nil, updated_at: nil>):
+    2: <%= simple_form_for [@loan_proposal] do |f| %>
+    3:   <%= f.input :amount %>
+    4:   <%= f.input :conditions, :collection => ["12x", "24x", "48x"] %>
+    5:   <%= f.input :description %>
+    6:   <% raise %>
+    7:   <%= f.submit %>
+    8: <% end %>
+  
+app/views/loan_proposals/new.html.erb:5
+app/views/loan_proposals/new.html.erb:2
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-01 21:44:42 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 252.8ms | Allocations: 9708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 26.9ms | Allocations: 726)
+  Rendered shared/_flashes.html.erb (Duration: 7.0ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 892.6ms | Allocations: 20653)
+Completed 200 OK in 1429ms (Views: 904.0ms | ActiveRecord: 198.2ms | Allocations: 34369)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-01 21:45:03 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"20000", "conditions"=>"24x", "description"=>"kdklsahdusdhusauijk"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (37.1ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 20000.0], ["user_id", 1], ["created_at", "2022-06-02 00:45:04.434903"], ["updated_at", "2022-06-02 00:45:04.434903"], ["description", "kdklsahdusdhusauijk"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (119.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 1185ms (ActiveRecord: 176.2ms | Allocations: 5149)
+
+
+Started GET "/users/2" for ::1 at 2022-06-01 21:45:04 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 22.8ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 148.4ms | Allocations: 356)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 14031.9ms | Allocations: 10455)
+Completed 200 OK in 14251ms (Views: 14043.9ms | ActiveRecord: 33.8ms | Allocations: 18287)
+
+
+  [1m[36mLoanProposal Load (2.0ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" ORDER BY "loan_proposals"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-01 21:53:18 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 189.2ms | Allocations: 9386)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 23.6ms | Allocations: 718)
+  Rendered shared/_flashes.html.erb (Duration: 9.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 713.7ms | Allocations: 19916)
+Completed 200 OK in 1287ms (Views: 747.4ms | ActiveRecord: 175.3ms | Allocations: 35431)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-01 21:53:40 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"24000", "conditions"=>"48x", "description"=>"blablabla"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (11.8ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "48x"], ["amount", 24000.0], ["user_id", 1], ["created_at", "2022-06-02 00:53:40.109585"], ["updated_at", "2022-06-02 00:53:40.109585"], ["description", "blablabla"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (34.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/status/3
+Completed 302 Found in 194ms (ActiveRecord: 65.3ms | Allocations: 5133)
+
+
+Started GET "/status/3" for ::1 at 2022-06-01 21:53:40 -0300
+Processing by PagesController#status as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.4ms | Allocations: 2327)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pages_controller.rb:13:in `status'
+Started PUT "/__web_console/repl_sessions/b6a9eaa749eb8c553825b7dc2b4a41de" for ::1 at 2022-06-01 21:53:47 -0300
+Started PUT "/__web_console/repl_sessions/b6a9eaa749eb8c553825b7dc2b4a41de" for ::1 at 2022-06-01 21:53:57 -0300
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStatuses (20220602010029)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (546.8ms)[0m  [1m[35mCREATE TABLE "statuses" ("id" bigserial primary key, "enviado" boolean, "analise" boolean, "aprovado" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220602010029"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (129.1ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[36mStatus Load (25.1ms)[0m  [1m[34mSELECT "statuses".* FROM "statuses" ORDER BY "statuses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mStatus Load (4.9ms)[0m  [1m[34mSELECT "statuses".* FROM "statuses" ORDER BY "statuses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (189.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (59.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1568.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "agrocashpundit_development"[0m
+  [1m[35m (690.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "agrocashpundit_test"[0m
+  [1m[35m (17330.8ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_development" ENCODING = 'unicode'[0m
+  [1m[35m (4186.0ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_test" ENCODING = 'unicode'[0m
+  [1m[35m (349.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (160.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220527161220)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (207.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (44.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (100.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527161220"]]
+  [1m[36mTRANSACTION (57.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20220527165125)
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (239.5ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "city" character varying, "street" character varying, "number" character varying, "neighborhood" character varying, "cep" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (79.0ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527165125"]]
+  [1m[36mTRANSACTION (77.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateScoredata (20220527174121)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (181.5ms)[0m  [1m[35mCREATE TABLE "scoredata" ("id" bigserial primary key, "annual_income" float, "culture" character varying, "ha_propriety" integer, "garantia" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_79722b676d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (88.0ms)[0m  [1m[35mCREATE INDEX "index_scoredata_on_user_id" ON "scoredata" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527174121"]]
+  [1m[36mTRANSACTION (52.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCultures (20220528144713)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (126.3ms)[0m  [1m[35mCREATE TABLE "cultures" ("id" bigserial primary key, "name" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_47a158a105"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (82.1ms)[0m  [1m[35mCREATE INDEX "index_cultures_on_user_id" ON "cultures" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144713"]]
+  [1m[36mTRANSACTION (32.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoanProposals (20220528144839)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (171.6ms)[0m  [1m[35mCREATE TABLE "loan_proposals" ("id" bigserial primary key, "conditions" character varying, "amount" float, "accepted" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_da8c7b0666"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (81.4ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_user_id" ON "loan_proposals" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144839"]]
+  [1m[36mTRANSACTION (53.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRoleToUser (20220528145052)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.4ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528145052"]]
+  [1m[36mTRANSACTION (26.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoanAccepteds (20220528214017)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (125.4ms)[0m  [1m[35mCREATE TABLE "loan_accepteds" ("id" bigserial primary key, "acepted" boolean, "user_id" bigint NOT NULL, "loan_proposal_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_192e57c382"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_bc58e6709b"
+FOREIGN KEY ("loan_proposal_id")
+  REFERENCES "loan_proposals" ("id")
+)[0m
+  [1m[35m (49.2ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_user_id" ON "loan_accepteds" ("user_id")[0m
+  [1m[35m (83.4ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_loan_proposal_id" ON "loan_accepteds" ("loan_proposal_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528214017"]]
+  [1m[36mTRANSACTION (30.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDescriptionsToLoanProposals (20220602001817)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "description" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220602001817"]]
+  [1m[36mTRANSACTION (37.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[35m (107.1ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_status_id" ON "loan_proposals" ("status_id")[0m
+  [1m[35m (47.4ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD CONSTRAINT "fk_rails_8d60ad5ed9"
+FOREIGN KEY ("status_id")
+  REFERENCES "statuses" ("id")
+[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
