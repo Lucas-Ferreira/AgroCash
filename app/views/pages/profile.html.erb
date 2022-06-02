@@ -1,2 +1,6 @@
-<h1> Profle Page</h1>
-<%= link_to 'New Address', new_user_address_path(current_user.id) %>
+<% if current_user.role == 'investor' %>
+  <%= render 'investor' %>
+<% else %>
+  <h1> Profile Page</h1>
+  <%= link_to 'New Address', new_user_address_path(current_user.id) %>
+<% end %>
