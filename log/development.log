@@ -4152,3 +4152,76 @@ FOREIGN KEY ("status_id")
 [0m
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (27.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (39.0ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[35m (57.6ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_status_id" ON "loan_proposals" ("status_id")[0m
+  [1m[35m (44.6ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD CONSTRAINT "fk_rails_8d60ad5ed9"
+FOREIGN KEY ("status_id")
+  REFERENCES "statuses" ("id")
+[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (27.4ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[35m (43.6ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_status_id" ON "loan_proposals" ("status_id")[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD CONSTRAINT "fk_rails_8d60ad5ed9"
+FOREIGN KEY ("status_id")
+  REFERENCES "statuses" ("id")
+[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[35m (56.2ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_status_id" ON "loan_proposals" ("status_id")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD CONSTRAINT "fk_rails_8d60ad5ed9"
+FOREIGN KEY ("status_id")
+  REFERENCES "statuses" ("id")
+[0m
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReferenceToLoanProposal (20220602011804)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD "status_id" bigint NOT NULL[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_status_id" ON "loan_proposals" ("status_id")[0m
+  [1m[35m (31.0ms)[0m  [1m[35mALTER TABLE "loan_proposals" ADD CONSTRAINT "fk_rails_8d60ad5ed9"
+FOREIGN KEY ("status_id")
+  REFERENCES "statuses" ("id")
+[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to Dropstatus (20220602230226)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.5ms)[0m  [1m[35mDROP TABLE "statuses"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (23.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (37.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-02 23:27:15.711570"], ["updated_at", "2022-06-02 23:27:15.711570"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeAcceptedToLoanProposal (20220602232847)
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (306.6ms)[0m  [1m[35mALTER TABLE "loan_proposals" ALTER COLUMN "accepted" TYPE character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220602232847"]]
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
