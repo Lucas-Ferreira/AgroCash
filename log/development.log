@@ -3309,3 +3309,15 @@ Entrypoint application = js/application-0229a294ea3652e1a5a5.js js/application-0
 Completed 200 OK in 11060ms (Views: 10985.5ms | Allocations: 13939)
 
 
+Started GET "/" for ::1 at 2022-06-02 15:53:53 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 8.5ms | Allocations: 189)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 23081.0ms | Allocations: 87902)
+Completed 200 OK in 23144ms (Views: 23098.9ms | Allocations: 88415)
+
+
