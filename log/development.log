@@ -3247,3 +3247,65 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 12113ms (Views: 12097.3ms | Allocations: 90319)
 
 
+Started GET "/" for ::1 at 2022-06-02 15:36:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 134)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 20ed8c7f0082bae8fac5
+Version: webpack 4.46.0
+Time: 2831ms
+Built at: 06/02/2022 3:36:32 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-92a0f85c6742b9a4e932.js    487 KiB  application  [emitted] [immutable]  application
+js/application-92a0f85c6742b9a4e932.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-92a0f85c6742b9a4e932.js js/application-92a0f85c6742b9a4e932.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.27 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 10.5ms | Allocations: 628)
+  Rendered shared/_flashes.html.erb (Duration: 2.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 10781.8ms | Allocations: 12515)
+Completed 200 OK in 10845ms (Views: 10804.9ms | Allocations: 14003)
+
+
+Started GET "/" for ::1 at 2022-06-02 15:43:59 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.4ms | Allocations: 137)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: a630f8fabe19b7d7fb70
+Version: webpack 4.46.0
+Time: 2573ms
+Built at: 06/02/2022 3:44:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-0229a294ea3652e1a5a5.js    487 KiB  application  [emitted] [immutable]  application
+js/application-0229a294ea3652e1a5a5.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-0229a294ea3652e1a5a5.js js/application-0229a294ea3652e1a5a5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 7.2ms | Allocations: 628)
+  Rendered shared/_flashes.html.erb (Duration: 3.2ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 10883.2ms | Allocations: 12450)
+Completed 200 OK in 11060ms (Views: 10985.5ms | Allocations: 13939)
+
+
