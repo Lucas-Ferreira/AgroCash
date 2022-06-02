@@ -3158,3 +3158,60 @@ Processing by PagesController#profile as HTML
 Completed 200 OK in 89ms (Views: 69.9ms | ActiveRecord: 2.3ms | Allocations: 14347)
 
 
+Started GET "/" for ::1 at 2022-06-02 20:21:08 -0300
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/leandro/code/leandroslima/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.6ms | Allocations: 290)
+  Rendered layout layouts/application.html.erb (Duration: 1760.2ms | Allocations: 31345)
+Completed 500 Internal Server Error in 1823ms (ActiveRecord: 0.0ms | Allocations: 35059)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$light-gray".
+        on line 9:27 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $body-bg:                 $light-gray;
+
+   --------------------------^
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    13:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:9
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-06-02 20:21:12 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.5ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 1984.2ms | Allocations: 86236)
+Completed 500 Internal Server Error in 1992ms (ActiveRecord: 0.0ms | Allocations: 87044)
+
+
+  
+ActionView::Template::Error (Error: Undefined variable: "$light-gray".
+        on line 9:27 of app/assets/stylesheets/config/_bootstrap_variables.scss
+        from line 4:9 of app/assets/stylesheets/application.scss
+>> $body-bg:                 $light-gray;
+
+   --------------------------^
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    13:   </head>
+  
+app/assets/stylesheets/config/_bootstrap_variables.scss:9
+app/views/layouts/application.html.erb:10
