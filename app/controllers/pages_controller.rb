@@ -7,5 +7,8 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
     @address = Address.new
+    @loan_proposals = LoanProposal.all
   end
+
+
 end
