@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_28_214017) do
+ActiveRecord::Schema.define(version: 2022_06_02_232847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,10 +48,11 @@ ActiveRecord::Schema.define(version: 2022_05_28_214017) do
   create_table "loan_proposals", force: :cascade do |t|
     t.string "conditions"
     t.float "amount"
-    t.boolean "accepted"
+    t.string "accepted"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
     t.index ["user_id"], name: "index_loan_proposals_on_user_id"
   end
 
