@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :addresses do
     end
   end
-  resources :loan_proposal do
+  resources :loan_proposals do
   end
   resources :score_data do
   end

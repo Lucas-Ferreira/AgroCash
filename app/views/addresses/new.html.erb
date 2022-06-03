@@ -1,2 +1,15 @@
 <h1> New Address </h1>
-<%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path(current_user.id) %>
+<div class="container">
+  <div class="row">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <%= simple_form_for [@user,@address] do |f| %>
+      <%= f.input :street %>
+      <%= f.input :city %>
+      <%= f.input :number %>
+      <%= f.input :neighborhood %>
+      <%= f.input :cep %>
+      <%= f.submit class: "btn btn-success" %>
+    <% end %>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@ class LoanProposalsController < ApplicationController
 
   def new
     @loan_proposal = LoanProposal.new
-    autorize @loan_proposal
+    authorize @loan_proposal
   end
 
   def create

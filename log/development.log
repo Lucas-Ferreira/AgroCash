@@ -3540,3 +3540,1102 @@ Entrypoint application = js/application-db70e9475f6e1e595cde.js js/application-d
 Completed 200 OK in 17794ms (Views: 17707.8ms | ActiveRecord: 0.0ms | Allocations: 47129)
 
 
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-03 13:21:29 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 631)
+  Rendered shared/_flashes.html.erb (Duration: 1.8ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 1.7ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 14543.1ms | Allocations: 160230)
+Completed 200 OK in 14606ms (Views: 14553.1ms | ActiveRecord: 0.0ms | Allocations: 166826)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:21:55 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 276)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 11054)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms | Allocations: 11635)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:23:47 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 782)
+  Rendered shared/_flashes.html.erb (Duration: 2.9ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 135.6ms | Allocations: 11879)
+Completed 200 OK in 148ms (Views: 145.7ms | ActiveRecord: 0.0ms | Allocations: 13378)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:24:08 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 727)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 11818)
+Completed 200 OK in 92ms (Views: 90.3ms | ActiveRecord: 0.0ms | Allocations: 13327)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:24:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 742)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 180)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 11831)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 13325)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:24:40 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.7ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 680)
+  Rendered shared/_flashes.html.erb (Duration: 1.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 11772)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.0ms | Allocations: 13265)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:25:12 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | Allocations: 745)
+  Rendered shared/_flashes.html.erb (Duration: 6.4ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.7ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 70.8ms | Allocations: 11834)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.0ms | Allocations: 13327)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-06-03 13:25:16 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (35.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 77.9ms | Allocations: 11254)
+
+
+Started GET "/" for ::1 at 2022-06-03 13:25:16 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 385)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 29)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 10373)
+Completed 200 OK in 41ms (Views: 35.8ms | ActiveRecord: 0.0ms | Allocations: 10925)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-03 13:25:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.1ms | Allocations: 655)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 134.1ms | Allocations: 20141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 391)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 152.8ms | Allocations: 30478)
+Completed 200 OK in 171ms (Views: 162.9ms | ActiveRecord: 0.0ms | Allocations: 32657)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for ::1 at 2022-06-03 13:26:02 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucas@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (35.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "lucas@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 449ms (ActiveRecord: 35.7ms | Allocations: 7527)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:26:03 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.7ms | Allocations: 284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 369)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 10653)
+Completed 200 OK in 99ms (Views: 54.3ms | ActiveRecord: 6.5ms | Allocations: 18296)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:26:32 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.4ms | Allocations: 302)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.7ms | Allocations: 706)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 45.6ms | Allocations: 11952)
+Completed 200 OK in 61ms (Views: 49.3ms | ActiveRecord: 1.3ms | Allocations: 14998)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:26:43 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.5ms | Allocations: 300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 706)
+  Rendered shared/_flashes.html.erb (Duration: 1.0ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 11915)
+Completed 200 OK in 42ms (Views: 33.6ms | ActiveRecord: 1.3ms | Allocations: 15027)
+
+
+Started GET "/loan_proposal/new.1" for ::1 at 2022-06-03 13:27:34 -0300
+  
+ActionController::RoutingError (uninitialized constant LoanProposalController
+Did you mean?  LoanProposalsController):
+  
+Started GET "/users/1" for ::1 at 2022-06-03 13:27:39 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.5ms | Allocations: 131)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 368)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 10487)
+Completed 200 OK in 50ms (Views: 42.5ms | ActiveRecord: 1.5ms | Allocations: 12666)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:29:22 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.3ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.7ms | Allocations: 708)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 3.6ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 296.5ms | Allocations: 11890)
+Completed 200 OK in 553ms (Views: 307.7ms | ActiveRecord: 67.0ms | Allocations: 25395)
+
+
+Started GET "/loan_proposal/new" for ::1 at 2022-06-03 13:29:29 -0300
+  
+ActionController::RoutingError (uninitialized constant LoanProposalController
+Did you mean?  LoanProposalsController):
+  
+Started GET "/loan_proposal/new" for ::1 at 2022-06-03 13:31:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/loan_proposal/new"):
+  
+Started GET "/users/1" for ::1 at 2022-06-03 13:31:08 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.9ms | Allocations: 395)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 10612)
+Completed 200 OK in 90ms (Views: 32.9ms | ActiveRecord: 28.2ms | Allocations: 23340)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:31:11 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 10250)
+Completed 200 OK in 33ms (Views: 24.1ms | ActiveRecord: 1.6ms | Allocations: 12369)
+
+
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 13:31:12 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 7.3ms | Allocations: 10262)
+
+
+  
+NoMethodError (undefined method `autorize' for #<LoanProposalsController:0x000000000107c0>
+Did you mean?  authorize):
+  
+app/controllers/loan_proposals_controller.rb:5:in `new'
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 13:31:25 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 80ms (ActiveRecord: 23.9ms | Allocations: 14011)
+
+
+  
+ActionController::MissingExactTemplate (LoanProposalsController#new is missing a template for request formats: text/html):
+  
+actionpack (6.1.6) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.6) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.6) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 13:33:24 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.1ms | Allocations: 751)
+  Rendered shared/_flashes.html.erb (Duration: 1.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.7ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 97.5ms | Allocations: 11819)
+Completed 200 OK in 123ms (Views: 111.1ms | ActiveRecord: 1.1ms | Allocations: 14954)
+
+
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 13:35:04 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 744)
+  Rendered shared/_flashes.html.erb (Duration: 1.6ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.7ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 11756)
+Completed 200 OK in 88ms (Views: 64.5ms | ActiveRecord: 2.0ms | Allocations: 14873)
+
+
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 13:35:11 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 744)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 11755)
+Completed 200 OK in 42ms (Views: 33.0ms | ActiveRecord: 1.4ms | Allocations: 14865)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:37:15 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.3ms | Allocations: 275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 393)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 10743)
+Completed 200 OK in 90ms (Views: 46.2ms | ActiveRecord: 9.5ms | Allocations: 18628)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:37:17 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.8ms | Allocations: 397)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 10663)
+Completed 200 OK in 51ms (Views: 32.2ms | ActiveRecord: 1.3ms | Allocations: 14941)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:42:18 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1623)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 1748)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 44.8ms | Allocations: 18590)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@Address] do |f| %>
+    4:   <%= f.input :description %>
+    5:   <%= f.input :price %>
+    6:   <%= f.input :photo, as: :file %>
+  
+app/views/addresses/new.html.erb:3
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:42:38 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1592)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1716)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.3ms | Allocations: 4780)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@Address] do |f| %>
+    4: 
+    5:   <%= f.submit %>
+    6: <% end %>
+  
+app/views/addresses/new.html.erb:3
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:42:46 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 3719)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3843)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms | Allocations: 6906)
+
+
+  
+ActionView::Template::Error (undefined method `addresses_path' for #<ActionView::Base:0x000000000166c0>
+Did you mean?  user_address_path):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@address] do |f| %>
+    4: 
+    5:   <%= f.submit %>
+    6: <% end %>
+  
+app/views/addresses/new.html.erb:3
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:44:09 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1666)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1790)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms | Allocations: 4853)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@Address] do |f| %>
+    4:   <%= f.input :street %>
+    5:   <%= f.input :city %>
+    6:   <%= f.input :number %>
+  
+app/views/addresses/new.html.erb:3
+Started GET "/users/1" for ::1 at 2022-06-03 13:44:46 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 2.0ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 708)
+  Rendered shared/_flashes.html.erb (Duration: 3.8ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 11910)
+Completed 200 OK in 63ms (Views: 56.4ms | ActiveRecord: 1.0ms | Allocations: 14951)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:44:47 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 10250)
+Completed 200 OK in 40ms (Views: 26.6ms | ActiveRecord: 3.0ms | Allocations: 12367)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:44:49 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1468)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1574)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms | Allocations: 4075)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@Address] do |f| %>
+    4:   <%= f.input :street %>
+    5:   <%= f.input :city %>
+    6:   <%= f.input :number %>
+  
+app/views/addresses/new.html.erb:3
+Started PUT "/__web_console/repl_sessions/a059258069bc79215c43c50b4051da8a" for ::1 at 2022-06-03 13:45:01 -0300
+Started PUT "/__web_console/repl_sessions/a059258069bc79215c43c50b4051da8a" for ::1 at 2022-06-03 13:45:04 -0300
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:45:33 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3781)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3905)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.9ms | Allocations: 7026)
+
+
+  
+ActionView::Template::Error (undefined method `addresses_path' for #<ActionView::Base:0x00000000017520>
+Did you mean?  user_address_path):
+    1: <h1> New Address </h1>
+    2: 
+    3: <%= simple_form_for [@address] do |f| %>
+    4:   <%= f.input :street %>
+    5:   <%= f.input :city %>
+    6:   <%= f.input :number %>
+  
+app/views/addresses/new.html.erb:3
+Started GET "/users/1" for ::1 at 2022-06-03 13:45:42 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.8ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 706)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 2.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 11942)
+Completed 200 OK in 63ms (Views: 55.2ms | ActiveRecord: 1.0ms | Allocations: 14791)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:45:43 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 10250)
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 12368)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:47:00 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 3.7ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.2ms | Allocations: 708)
+  Rendered shared/_flashes.html.erb (Duration: 2.1ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 4.8ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 182.5ms | Allocations: 11834)
+Completed 200 OK in 302ms (Views: 193.6ms | ActiveRecord: 50.1ms | Allocations: 25506)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:47:03 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.4ms | Allocations: 3644)
+
+
+  
+RuntimeError ():
+  
+app/controllers/addresses_controller.rb:12:in `new'
+Started PUT "/__web_console/repl_sessions/81b3eb5103a75e6e5114f5a86ef0c865" for ::1 at 2022-06-03 13:47:05 -0300
+Started PUT "/__web_console/repl_sessions/81b3eb5103a75e6e5114f5a86ef0c865" for ::1 at 2022-06-03 13:47:05 -0300
+Started GET "/users/1" for ::1 at 2022-06-03 13:47:12 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.7ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 395)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 67.8ms | Allocations: 10616)
+Completed 200 OK in 133ms (Views: 70.1ms | ActiveRecord: 31.4ms | Allocations: 23361)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 13:47:14 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.5ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 10299)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 0.9ms | Allocations: 12419)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:47:16 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 7425)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.6ms | Allocations: 388)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 17745)
+Completed 200 OK in 56ms (Views: 41.2ms | ActiveRecord: 3.6ms | Allocations: 22105)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:47:42 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 6314)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 700)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 17780)
+Completed 200 OK in 79ms (Views: 70.4ms | ActiveRecord: 1.0ms | Allocations: 20910)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:48:23 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 6322)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 17783)
+Completed 200 OK in 50ms (Views: 40.9ms | ActiveRecord: 1.9ms | Allocations: 20899)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:48:31 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 6320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 17781)
+Completed 200 OK in 51ms (Views: 41.8ms | ActiveRecord: 1.0ms | Allocations: 20896)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:48:42 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 6319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 1.0ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 17780)
+Completed 200 OK in 52ms (Views: 42.2ms | ActiveRecord: 1.0ms | Allocations: 20895)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:52:25 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 6353)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 699)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 17871)
+Completed 200 OK in 67ms (Views: 57.4ms | ActiveRecord: 1.0ms | Allocations: 20995)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:52:45 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 6324)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 17786)
+Completed 200 OK in 49ms (Views: 39.5ms | ActiveRecord: 1.8ms | Allocations: 20906)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:52:53 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 6319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 17783)
+Completed 200 OK in 57ms (Views: 43.3ms | ActiveRecord: 6.0ms | Allocations: 20899)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:54:01 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1240)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1365)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms | Allocations: 4427)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1> New Address </h1>
+<div class="container">
+  <div class="row">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <%= simple_form_for [@user,@address] do |f| %>
+      <%= f.input :street %>
+      <%= f.input :city %>
+      <%= f.input :number %>
+      <%= f.input :neighborhood %>
+      <%= f.input :cep %>
+      <%= f.submit, class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+):
+1:    <h1> New Address </h1>
+2:    <div class="container">
+3:      <div class="row">
+4:      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+5:        <%= simple_form_for [@user,@address] do |f| %>
+6:          <%= f.input :street %>
+7:          <%= f.input :city %>
+8:          <%= f.input :number %>
+9:          <%= f.input :neighborhood %>
+10:          <%= f.input :cep %>
+11:          <%= f.submit, class: "btn btn-primary" %>
+12:        <% end %>
+13:        </div>
+14:      </div>
+15:    </div>
+  
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+app/views/addresses/new.html.erb:11: syntax error, unexpected label, expecting '='
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:54:09 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 6397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.1ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 1.9ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 2.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 17914)
+Completed 200 OK in 69ms (Views: 56.8ms | ActiveRecord: 0.9ms | Allocations: 21042)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:54:22 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 6337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 701)
+  Rendered shared/_flashes.html.erb (Duration: 0.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 17849)
+Completed 200 OK in 56ms (Views: 46.4ms | ActiveRecord: 2.4ms | Allocations: 20965)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:54:32 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 6367)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 17829)
+Completed 200 OK in 60ms (Views: 47.2ms | ActiveRecord: 1.1ms | Allocations: 20952)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:54:40 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 6337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 17798)
+Completed 200 OK in 64ms (Views: 55.3ms | ActiveRecord: 1.0ms | Allocations: 20913)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:56:17 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 6366)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 17827)
+Completed 200 OK in 67ms (Views: 58.8ms | ActiveRecord: 0.9ms | Allocations: 20942)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:56:27 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 15.0ms | Allocations: 6361)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 699)
+  Rendered shared/_flashes.html.erb (Duration: 5.6ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 17823)
+Completed 200 OK in 93ms (Views: 84.1ms | ActiveRecord: 0.9ms | Allocations: 20939)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:56:34 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 6363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.8ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 17872)
+Completed 200 OK in 51ms (Views: 42.5ms | ActiveRecord: 1.0ms | Allocations: 20993)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:56:35 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 15997)
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 1.0ms | Allocations: 18143)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 13:58:42 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 698)
+  Rendered shared/_flashes.html.erb (Duration: 1.6ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 17866)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 1.1ms | Allocations: 20764)
+
+
+Started POST "/users/1/addresses" for ::1 at 2022-06-03 13:59:20 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by AddressesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "address"=>{"street"=>"Alemda", "city"=>"Belo Horizonte", "number"=>"12", "neighborhood"=>"Savassi", "cep"=>"32310010"}, "commit"=>"Create Address", "user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 11.0ms | Allocations: 7817)
+
+
+  
+RuntimeError ():
+  
+app/controllers/addresses_controller.rb:15:in `create'
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-03 14:01:06 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6925)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 0.4ms | Allocations: 390)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 17300)
+Completed 200 OK in 137ms (Views: 56.6ms | ActiveRecord: 31.8ms | Allocations: 30372)
+
+
+Started POST "/users/1/addresses" for ::1 at 2022-06-03 14:01:09 -0300
+Processing by AddressesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "address"=>{"street"=>"Alemda", "city"=>"Belo Horizonte", "number"=>"12", "neighborhood"=>"Savassi", "cep"=>"32310010"}, "commit"=>"Create Address", "user_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :number[0m
+Completed 422 Unprocessable Entity in 24ms (ActiveRecord: 1.1ms | Allocations: 4744)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/addresses_controller.rb:17:in `create'
+Started POST "/users/1/addresses" for ::1 at 2022-06-03 14:01:34 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by AddressesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "address"=>{"street"=>"Alemda", "city"=>"Belo Horizonte", "number"=>"12", "neighborhood"=>"Savassi", "cep"=>"32310010"}, "commit"=>"Create Address", "user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :number[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+  [1m[36mAddress Create (72.4ms)[0m  [1m[32mINSERT INTO "addresses" ("city", "street", "neighborhood", "cep", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["city", "Belo Horizonte"], ["street", "Alemda"], ["neighborhood", "Savassi"], ["cep", "32310010"], ["user_id", 1], ["created_at", "2022-06-03 17:01:35.299695"], ["updated_at", "2022-06-03 17:01:35.299695"]]
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 114.0ms | Allocations: 16569)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"profile", :controller=>"pages", :user_id=>"1"}, missing required keys: [:id]
+Did you mean?  user_profile_url):
+  
+app/controllers/addresses_controller.rb:19:in `create'
+Started POST "/users/1/addresses" for ::1 at 2022-06-03 14:02:14 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/lucasferreira/code/Lucas-Ferreira/AgroCash/app/controllers/application_controller.rb:3)
+Processing by AddressesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "address"=>{"street"=>"Alemda", "city"=>"Belo Horizonte", "number"=>"12", "neighborhood"=>"Savassi", "cep"=>"32310010"}, "commit"=>"Create Address", "user_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[31mUnpermitted parameter: :number[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+  [1m[36mAddress Create (3.8ms)[0m  [1m[32mINSERT INTO "addresses" ("city", "street", "neighborhood", "cep", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["city", "Belo Horizonte"], ["street", "Alemda"], ["neighborhood", "Savassi"], ["cep", "32310010"], ["user_id", 1], ["created_at", "2022-06-03 17:02:15.370931"], ["updated_at", "2022-06-03 17:02:15.370931"]]
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (43.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/addresses_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 137ms (ActiveRecord: 70.0ms | Allocations: 15915)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 14:02:15 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 1.6ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.3ms | Allocations: 395)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 88.2ms | Allocations: 10743)
+Completed 200 OK in 167ms (Views: 94.5ms | ActiveRecord: 1.6ms | Allocations: 13785)
+
+

@@ -7,11 +7,19 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
+    @user = current_user
     authorize @address
   end
 
   def create
-
+    @address = Address.new(address_params)
+    @address.user = current_user
+    authorize @address
+    if @address.save!
+      redirect_to user_profile_path(current_user)
+    else
+      render :new
+    end
   end
 
   def show
