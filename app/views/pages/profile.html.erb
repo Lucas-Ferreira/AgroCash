@@ -2,5 +2,5 @@
 <%= link_to 'New Address', new_user_address_path(current_user.id) %>
 <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path %>
 <% @loan_proposals.each do |proposal| %>
-<%= link_to 'Proposta', loan_proposal_path(proposal) %>
+<%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal) %>
 <% end %>

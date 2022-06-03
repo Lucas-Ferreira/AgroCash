@@ -3064,6 +3064,7 @@ Started GET "/loan_proposal/new.1" for ::1 at 2022-06-01 09:10:52 -0300
 ActionController::RoutingError (uninitialized constant LoanProposalController
 Did you mean?  LoanProposalsController):
   
+<<<<<<< HEAD
 Started GET "/loan_proposal/new.1" for ::1 at 2022-06-01 09:24:16 -0300
   
 ActionController::RoutingError (uninitialized constant LoanProposalController
@@ -3340,6 +3341,31 @@ rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
 rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
 actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
 activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+=======
+Started GET "/" for ::1 at 2022-06-02 14:02:04 -0300
+  
+ActiveRecord::NoDatabaseError (connection to server on socket "/tmp/.s.PGSQL.5432" failed: FATAL:  database "agrocashpundit_development" does not exist
+):
+  
+activerecord (6.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.6) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.6) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.6) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.6) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.6) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.6) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.6) lib/active_record/migration.rb:587:in `call'
+>>>>>>> master
 actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
 activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
 actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
@@ -3377,6 +3403,7 @@ puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.4) lib/puma/server.rb:441:in `process_client'
 puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/users/1" for ::1 at 2022-06-01 10:01:16 -0300
 Processing by PagesController#profile as HTML
   Parameters: {"id"=>"1"}
@@ -5225,5 +5252,612 @@ Processing by LoanProposalsController#show as HTML
   Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 27)
   Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 9755)
 Completed 200 OK in 212ms (Views: 138.5ms | ActiveRecord: 15.5ms | Allocations: 12450)
+=======
+  [1m[35m (949.5ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_development" ENCODING = 'unicode'[0m
+  [1m[35m (352.0ms)[0m  [1m[35mCREATE DATABASE "agrocashpundit_test" ENCODING = 'unicode'[0m
+  [1m[35m (68.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4179270147049961460)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220527161220)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527161220"]]
+  [1m[36mTRANSACTION (41.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAddresses (20220527165125)
+  [1m[36mTRANSACTION (33.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" bigserial primary key, "city" character varying, "street" character varying, "number" character varying, "neighborhood" character varying, "cep" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48c9e0c5a2"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_user_id" ON "addresses" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527165125"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateScoredata (20220527174121)
+  [1m[36mTRANSACTION (24.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "scoredata" ("id" bigserial primary key, "annual_income" float, "culture" character varying, "ha_propriety" integer, "garantia" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_79722b676d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE INDEX "index_scoredata_on_user_id" ON "scoredata" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220527174121"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCultures (20220528144713)
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "cultures" ("id" bigserial primary key, "name" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_47a158a105"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_cultures_on_user_id" ON "cultures" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144713"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoanProposals (20220528144839)
+  [1m[36mTRANSACTION (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "loan_proposals" ("id" bigserial primary key, "conditions" character varying, "amount" float, "accepted" boolean, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_da8c7b0666"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_loan_proposals_on_user_id" ON "loan_proposals" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528144839"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRoleToUser (20220528145052)
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "role" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528145052"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLoanAccepteds (20220528214017)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "loan_accepteds" ("id" bigserial primary key, "acepted" boolean, "user_id" bigint NOT NULL, "loan_proposal_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_192e57c382"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_bc58e6709b"
+FOREIGN KEY ("loan_proposal_id")
+  REFERENCES "loan_proposals" ("id")
+)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_user_id" ON "loan_accepteds" ("user_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE INDEX "index_loan_accepteds_on_loan_proposal_id" ON "loan_accepteds" ("loan_proposal_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220528214017"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (106.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-06-02 17:03:42.809409"], ["updated_at", "2022-06-02 17:03:42.809409"]]
+  [1m[36mTRANSACTION (82.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-02 14:04:28 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.2ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.7ms | Allocations: 824)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 16910.3ms | Allocations: 158304)
+Completed 200 OK in 16981ms (Views: 16921.5ms | ActiveRecord: 0.0ms | Allocations: 163563)
+
+
+Started GET "/" for ::1 at 2022-06-02 14:39:52 -0300
+  [1m[35m (43.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 34.7ms | Allocations: 824)
+  Rendered shared/_flashes.html.erb (Duration: 1.7ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 2.1ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 27810.2ms | Allocations: 148799)
+Completed 200 OK in 27939ms (Views: 27816.3ms | ActiveRecord: 0.0ms | Allocations: 155391)
+
+
+Started GET "/" for ::1 at 2022-06-02 14:41:26 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.7ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 1.3ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 137.7ms | Allocations: 11543)
+Completed 200 OK in 197ms (Views: 161.7ms | ActiveRecord: 0.0ms | Allocations: 13096)
+
+
+Started GET "/" for ::1 at 2022-06-02 14:42:44 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 4.3ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 1.2ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 173.6ms | Allocations: 11547)
+Completed 200 OK in 257ms (Views: 224.3ms | ActiveRecord: 0.0ms | Allocations: 13048)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:16:22 -0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.9ms | Allocations: 291)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: c61f470ac69d3ff57686
+Version: webpack 4.46.0
+Time: 10869ms
+Built at: 06/02/2022 9:16:57 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-55fad670b9456635d900.js    483 KiB  application  [emitted] [immutable]  application
+js/application-55fad670b9456635d900.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-55fad670b9456635d900.js js/application-55fad670b9456635d900.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 187 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 16.8ms | Allocations: 633)
+  Rendered shared/_flashes.html.erb (Duration: 4.5ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 31512.8ms | Allocations: 44317)
+Completed 200 OK in 31945ms (Views: 31546.2ms | ActiveRecord: 0.0ms | Allocations: 50909)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:17:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 8.0ms | Allocations: 568)
+  Rendered shared/_flashes.html.erb (Duration: 10.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 6.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 252.9ms | Allocations: 11490)
+Completed 200 OK in 345ms (Views: 317.3ms | ActiveRecord: 0.0ms | Allocations: 13053)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:18:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 12.4ms | Allocations: 565)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 4.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 362.1ms | Allocations: 11584)
+Completed 200 OK in 420ms (Views: 406.5ms | ActiveRecord: 0.0ms | Allocations: 13086)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:19:55 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 289.6ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 36.9ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 22.2ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 794.4ms | Allocations: 9990)
+Completed 200 OK in 837ms (Views: 822.1ms | ActiveRecord: 0.0ms | Allocations: 10510)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:20:28 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 32317.8ms | Allocations: 89831)
+Completed 200 OK in 32354ms (Views: 32339.8ms | ActiveRecord: 0.0ms | Allocations: 90309)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:21:53 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.1ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 28143.4ms | Allocations: 88550)
+Completed 200 OK in 28194ms (Views: 28162.7ms | Allocations: 89025)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:25:07 -0300
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.1ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 4.4ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 27683.8ms | Allocations: 134787)
+Completed 200 OK in 27840ms (Views: 27692.7ms | ActiveRecord: 0.0ms | Allocations: 141380)
+
+
+Started GET "/logo.png" for ::1 at 2022-06-02 21:25:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo.png"):
+  
+Started GET "/" for ::1 at 2022-06-02 21:31:25 -0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 381)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 6b758308122bf734a8f9
+Version: webpack 4.46.0
+Time: 4846ms
+Built at: 06/02/2022 9:31:42 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-95d4ea35372b9e231ac4.js    487 KiB  application  [emitted] [immutable]  application
+js/application-95d4ea35372b9e231ac4.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-95d4ea35372b9e231ac4.js js/application-95d4ea35372b9e231ac4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 4.3ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 2.6ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 16680.0ms | Allocations: 40544)
+Completed 200 OK in 16803ms (Views: 16691.9ms | ActiveRecord: 0.0ms | Allocations: 47135)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:35:29 -0300
+  [1m[35m (235.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.5ms | Allocations: 381)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: b71b25931b9029a07c14
+Version: webpack 4.46.0
+Time: 37278ms
+Built at: 06/02/2022 9:36:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b814cd0126732b5f5e04.js    487 KiB  application  [emitted] [immutable]  application
+js/application-b814cd0126732b5f5e04.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b814cd0126732b5f5e04.js js/application-b814cd0126732b5f5e04.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.53 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 556 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 14.3ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 6.0ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 77.0ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 73465.5ms | Allocations: 42005)
+Completed 200 OK in 74175ms (Views: 73502.5ms | ActiveRecord: 0.0ms | Allocations: 48596)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:43:19 -0300
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 2886.0ms | Allocations: 38280)
+Completed 500 Internal Server Error in 2925ms (ActiveRecord: 0.0ms | Allocations: 41999)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: card.
+        on line 6:1 of app/assets/stylesheets/components/_index.scss
+        from line 12:1 of app/assets/stylesheets/application.scss
+>> @import "card";
+
+   ^
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    13:   </head>
+  
+app/assets/stylesheets/components/_index.scss:6
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-06-02 21:43:42 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 62.9ms | Allocations: 292)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 35b2870460e08aed4de6
+Version: webpack 4.46.0
+Time: 6804ms
+Built at: 06/02/2022 9:44:26 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bf919b88f5fe8e5ef3f0.js    487 KiB  application  [emitted] [immutable]  application
+js/application-bf919b88f5fe8e5ef3f0.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bf919b88f5fe8e5ef3f0.js js/application-bf919b88f5fe8e5ef3f0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 602 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 22.8ms | Allocations: 546)
+  Rendered shared/_flashes.html.erb (Duration: 6.6ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 26.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 44728.7ms | Allocations: 127838)
+Completed 200 OK in 44907ms (Views: 44742.2ms | ActiveRecord: 0.0ms | Allocations: 131247)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:47:09 -0300
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 380)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 9a94d5024a752ff4e335
+Version: webpack 4.46.0
+Time: 7082ms
+Built at: 06/02/2022 9:47:27 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-db70e9475f6e1e595cde.js    487 KiB  application  [emitted] [immutable]  application
+js/application-db70e9475f6e1e595cde.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-db70e9475f6e1e595cde.js js/application-db70e9475f6e1e595cde.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.53 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 5.6ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 2.5ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 6.5ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 17698.5ms | Allocations: 40537)
+Completed 200 OK in 17794ms (Views: 17707.8ms | ActiveRecord: 0.0ms | Allocations: 47129)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:17:54 -0300
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 29.0ms | Allocations: 379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 20.6ms | Allocations: 631)
+  Rendered shared/_flashes.html.erb (Duration: 10.3ms | Allocations: 203)
+  Rendered shared/_footer.html.erb (Duration: 4.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 13557.7ms | Allocations: 64033)
+Completed 200 OK in 13787ms (Views: 13609.6ms | ActiveRecord: 0.0ms | Allocations: 68620)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:18:33 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.7ms | Allocations: 276)
+  Rendered shared/_flashes.html.erb (Duration: 1.1ms | Allocations: 28)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 161.9ms | Allocations: 9699)
+Completed 200 OK in 173ms (Views: 167.7ms | ActiveRecord: 0.0ms | Allocations: 10286)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:20:26 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.5ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 164.4ms | Allocations: 9531)
+Completed 200 OK in 174ms (Views: 168.1ms | ActiveRecord: 0.0ms | Allocations: 10014)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:20:31 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.4ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 11.9ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 386.4ms | Allocations: 9535)
+Completed 200 OK in 431ms (Views: 416.9ms | ActiveRecord: 0.0ms | Allocations: 10018)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:20:33 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.0ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 204.8ms | Allocations: 9529)
+Completed 200 OK in 224ms (Views: 209.3ms | ActiveRecord: 0.0ms | Allocations: 10007)
+>>>>>>> master
+
+
+Started GET "/" for ::1 at 2022-06-03 08:28:01 -0300
+  [1m[35m (93.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 32.8ms | Allocations: 379)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 19.7ms | Allocations: 626)
+  Rendered shared/_flashes.html.erb (Duration: 9.9ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 21.7ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 1606.0ms | Allocations: 43187)
+Completed 200 OK in 1772ms (Views: 1645.0ms | ActiveRecord: 0.0ms | Allocations: 47668)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 08:28:26 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 13ms (ActiveRecord: 0.0ms | Allocations: 435)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-03 08:28:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 18.5ms | Allocations: 654)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 448.8ms | Allocations: 18757)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.0ms | Allocations: 279)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 41)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 512.1ms | Allocations: 28414)
+Completed 200 OK in 730ms (Views: 521.1ms | ActiveRecord: 150.9ms | Allocations: 35884)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-06-03 08:28:35 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tamara@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (132.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tamara@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 1717ms (ActiveRecord: 138.1ms | Allocations: 6540)
+
+
+Started GET "/users/1" for ::1 at 2022-06-03 08:28:36 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (27.5ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 86.2ms | Allocations: 5655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 274)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 33)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 145.6ms | Allocations: 15376)
+Completed 200 OK in 266ms (Views: 105.6ms | ActiveRecord: 60.5ms | Allocations: 23605)
+
+
+Started GET "/loan_proposals/8" for ::1 at 2022-06-03 08:28:46 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (5.3ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:46:in `set_loan_proposal'
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 185)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.4ms | Allocations: 297)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 10105)
+Completed 200 OK in 178ms (Views: 102.2ms | ActiveRecord: 9.3ms | Allocations: 14584)
+
+
+Started GET "/loan_proposals/new" for ::1 at 2022-06-03 08:31:31 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 175.7ms | Allocations: 12833)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 272)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 250.5ms | Allocations: 22593)
+Completed 200 OK in 289ms (Views: 253.2ms | ActiveRecord: 5.9ms | Allocations: 24921)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-03 08:31:57 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"18000", "conditions"=>"24x", "description"=>"bkhgiugihvkhvj"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mLoanProposal Create (74.9ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 18000.0], ["user_id", 1], ["created_at", "2022-06-03 11:31:57.760311"], ["updated_at", "2022-06-03 11:31:57.760311"], ["description", "bkhgiugihvkhvj"]]
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/loan_proposals/10
+Completed 302 Found in 187ms (ActiveRecord: 94.8ms | Allocations: 6645)
+
+
+Started GET "/loan_proposals/10" for ::1 at 2022-06-03 08:31:57 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (3.0ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:46:in `set_loan_proposal'
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 11)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.2ms | Allocations: 276)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 9679)
+Completed 200 OK in 89ms (Views: 63.8ms | ActiveRecord: 6.7ms | Allocations: 12391)
 
 
