@@ -3254,3 +3254,289 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 257ms (Views: 224.3ms | ActiveRecord: 0.0ms | Allocations: 13048)
 
 
+Started GET "/" for ::1 at 2022-06-02 21:16:22 -0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 8.9ms | Allocations: 291)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: c61f470ac69d3ff57686
+Version: webpack 4.46.0
+Time: 10869ms
+Built at: 06/02/2022 9:16:57 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-55fad670b9456635d900.js    483 KiB  application  [emitted] [immutable]  application
+js/application-55fad670b9456635d900.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-55fad670b9456635d900.js js/application-55fad670b9456635d900.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 187 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 16.8ms | Allocations: 633)
+  Rendered shared/_flashes.html.erb (Duration: 4.5ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 1.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 31512.8ms | Allocations: 44317)
+Completed 200 OK in 31945ms (Views: 31546.2ms | ActiveRecord: 0.0ms | Allocations: 50909)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:17:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 96)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 8.0ms | Allocations: 568)
+  Rendered shared/_flashes.html.erb (Duration: 10.5ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 6.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 252.9ms | Allocations: 11490)
+Completed 200 OK in 345ms (Views: 317.3ms | ActiveRecord: 0.0ms | Allocations: 13053)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:18:34 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 12.4ms | Allocations: 565)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 179)
+  Rendered shared/_footer.html.erb (Duration: 4.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 362.1ms | Allocations: 11584)
+Completed 200 OK in 420ms (Views: 406.5ms | ActiveRecord: 0.0ms | Allocations: 13086)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:19:55 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 289.6ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 36.9ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 22.2ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 794.4ms | Allocations: 9990)
+Completed 200 OK in 837ms (Views: 822.1ms | ActiveRecord: 0.0ms | Allocations: 10510)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:20:28 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.1ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 32317.8ms | Allocations: 89831)
+Completed 200 OK in 32354ms (Views: 32339.8ms | ActiveRecord: 0.0ms | Allocations: 90309)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:21:53 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.1ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 28143.4ms | Allocations: 88550)
+Completed 200 OK in 28194ms (Views: 28162.7ms | Allocations: 89025)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:25:07 -0300
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 5.5ms | Allocations: 403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.1ms | Allocations: 627)
+  Rendered shared/_flashes.html.erb (Duration: 4.4ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 27683.8ms | Allocations: 134787)
+Completed 200 OK in 27840ms (Views: 27692.7ms | ActiveRecord: 0.0ms | Allocations: 141380)
+
+
+Started GET "/logo.png" for ::1 at 2022-06-02 21:25:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo.png"):
+  
+Started GET "/" for ::1 at 2022-06-02 21:31:25 -0300
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 381)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 6b758308122bf734a8f9
+Version: webpack 4.46.0
+Time: 4846ms
+Built at: 06/02/2022 9:31:42 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-95d4ea35372b9e231ac4.js    487 KiB  application  [emitted] [immutable]  application
+js/application-95d4ea35372b9e231ac4.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-95d4ea35372b9e231ac4.js js/application-95d4ea35372b9e231ac4.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 534 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 4.3ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 2.0ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 2.6ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 16680.0ms | Allocations: 40544)
+Completed 200 OK in 16803ms (Views: 16691.9ms | ActiveRecord: 0.0ms | Allocations: 47135)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:35:29 -0300
+  [1m[35m (235.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.5ms | Allocations: 381)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: b71b25931b9029a07c14
+Version: webpack 4.46.0
+Time: 37278ms
+Built at: 06/02/2022 9:36:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b814cd0126732b5f5e04.js    487 KiB  application  [emitted] [immutable]  application
+js/application-b814cd0126732b5f5e04.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b814cd0126732b5f5e04.js js/application-b814cd0126732b5f5e04.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.53 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 556 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 14.3ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 6.0ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 77.0ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 73465.5ms | Allocations: 42005)
+Completed 200 OK in 74175ms (Views: 73502.5ms | ActiveRecord: 0.0ms | Allocations: 48596)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:43:19 -0300
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 2886.0ms | Allocations: 38280)
+Completed 500 Internal Server Error in 2925ms (ActiveRecord: 0.0ms | Allocations: 41999)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: card.
+        on line 6:1 of app/assets/stylesheets/components/_index.scss
+        from line 12:1 of app/assets/stylesheets/application.scss
+>> @import "card";
+
+   ^
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11: 
+    12:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    13:   </head>
+  
+app/assets/stylesheets/components/_index.scss:6
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-06-02 21:43:42 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 62.9ms | Allocations: 292)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 35b2870460e08aed4de6
+Version: webpack 4.46.0
+Time: 6804ms
+Built at: 06/02/2022 9:44:26 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bf919b88f5fe8e5ef3f0.js    487 KiB  application  [emitted] [immutable]  application
+js/application-bf919b88f5fe8e5ef3f0.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bf919b88f5fe8e5ef3f0.js js/application-bf919b88f5fe8e5ef3f0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.5 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 602 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 22.8ms | Allocations: 546)
+  Rendered shared/_flashes.html.erb (Duration: 6.6ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 26.3ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 44728.7ms | Allocations: 127838)
+Completed 200 OK in 44907ms (Views: 44742.2ms | ActiveRecord: 0.0ms | Allocations: 131247)
+
+
+Started GET "/" for ::1 at 2022-06-02 21:47:09 -0300
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /Users/arthurpompeu/code/AGP20/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 380)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/arthurpompeu/code/AGP20/AgroCash/public/packs
+[Webpacker] Hash: 9a94d5024a752ff4e335
+Version: webpack 4.46.0
+Time: 7082ms
+Built at: 06/02/2022 9:47:27 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-db70e9475f6e1e595cde.js    487 KiB  application  [emitted] [immutable]  application
+js/application-db70e9475f6e1e595cde.js.map    455 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-db70e9475f6e1e595cde.js js/application-db70e9475f6e1e595cde.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 213 bytes {application} [built]
+[./app/javascript/controllers/hello_controller.js] 3.55 KiB {application} [optional] [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/navbar_controller.js] 3.53 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 624 bytes {application} [built]
+    + 66 hidden modules
+
+  Rendered shared/_navbar.html.erb (Duration: 5.6ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 2.5ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 6.5ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 17698.5ms | Allocations: 40537)
+Completed 200 OK in 17794ms (Views: 17707.8ms | ActiveRecord: 0.0ms | Allocations: 47129)
+
+
