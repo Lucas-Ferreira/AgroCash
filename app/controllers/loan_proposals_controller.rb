@@ -9,7 +9,7 @@ class LoanProposalsController < ApplicationController
     @loan_proposal = LoanProposal.new(loan_proposal_params)
     @loan_proposal.user = current_user
     if @loan_proposal.save
-      redirect_to loan_status_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
+      redirect_to loan_proposal_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
     else
       render :new
     end

@@ -4225,3 +4225,400 @@ Migrating to ChangeAcceptedToLoanProposal (20220602232847)
   [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4179270147049961460)[0m
   [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-06-02 20:38:48 -0300
+Started GET "/" for ::1 at 2022-06-02 20:38:48 -0300
+  [1m[35m (56.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 45.6ms | Allocations: 323)
+  Rendered pages/home.html.erb within layouts/application (Duration: 20.9ms | Allocations: 166)
+Started GET "/" for ::1 at 2022-06-02 20:38:58 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 55.9ms | Allocations: 1578)
+  Rendered shared/_navbar.html.erb (Duration: 55.3ms | Allocations: 1680)
+  Rendered shared/_flashes.html.erb (Duration: 25.7ms | Allocations: 1262)
+  Rendered layout layouts/application.html.erb (Duration: 9417.9ms | Allocations: 112673)
+Completed 200 OK in 9670ms (Views: 9490.1ms | ActiveRecord: 0.0ms | Allocations: 117013)
+
+
+  Rendered shared/_flashes.html.erb (Duration: 22.6ms | Allocations: 1107)
+  Rendered layout layouts/application.html.erb (Duration: 9540.6ms | Allocations: 114638)
+Completed 200 OK in 9813ms (Views: 9578.3ms | ActiveRecord: 0.0ms | Allocations: 119059)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 239)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 2809.6ms | Allocations: 98410)
+Completed 200 OK in 2840ms (Views: 2836.9ms | ActiveRecord: 0.0ms | Allocations: 98915)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-02 20:39:09 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 49.6ms | Allocations: 658)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1527.7ms | Allocations: 20084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.9ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 1687.2ms | Allocations: 29726)
+Completed 200 OK in 1944ms (Views: 1721.8ms | ActiveRecord: 57.4ms | Allocations: 38035)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-06-02 20:39:17 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 151)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 211.8ms | Allocations: 7901)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.5ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 366.4ms | Allocations: 17521)
+Completed 200 OK in 418ms (Views: 403.7ms | ActiveRecord: 0.0ms | Allocations: 19154)
+
+
+Started POST "/users" for ::1 at 2022-06-02 20:39:34 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tamara@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (59.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tamara@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (9.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tamara@mail.com"], ["encrypted_password", "$2a$12$Ul5VHnkdjI4C5BPLiYyq..04.5qT9EvHdAFX3MwCm1LIzkrII5NPy"], ["created_at", "2022-06-02 23:39:36.824146"], ["updated_at", "2022-06-02 23:39:36.824146"]]
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2034ms (ActiveRecord: 92.2ms | Allocations: 10728)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 20:39:37 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  Rendered pages/profile.html.erb within layouts/application (Duration: 49.0ms | Allocations: 287)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 348)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 36)
+  Rendered layout layouts/application.html.erb (Duration: 143.6ms | Allocations: 9828)
+Completed 200 OK in 426ms (Views: 146.8ms | ActiveRecord: 39.9ms | Allocations: 17907)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 20:39:46 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 131.9ms | Allocations: 10181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 1.7ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 217.6ms | Allocations: 19982)
+Completed 200 OK in 458ms (Views: 224.3ms | ActiveRecord: 27.8ms | Allocations: 28060)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 20:40:05 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (116.7ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-02 23:40:05.382397"], ["updated_at", "2022-06-02 23:40:05.382397"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/status/1
+Completed 302 Found in 531ms (ActiveRecord: 164.6ms | Allocations: 6231)
+
+
+Started GET "/status/1" for ::1 at 2022-06-02 20:40:05 -0300
+Processing by PagesController#status as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 7.2ms | Allocations: 2144)
+
+
+  
+RuntimeError ():
+  
+app/controllers/pages_controller.rb:13:in `status'
+Started GET "/status/1" for ::1 at 2022-06-02 20:41:40 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#status as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 57.9ms | Allocations: 11235)
+
+
+  
+NameError (undefined local variable or method `id' for #<PagesController:0x0000000000d610>):
+  
+app/controllers/pages_controller.rb:14:in `status'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 20:41:49 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (28.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 244.7ms | Allocations: 9191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 11.2ms | Allocations: 354)
+  Rendered shared/_flashes.html.erb (Duration: 0.8ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 644.1ms | Allocations: 19009)
+Completed 200 OK in 1027ms (Views: 661.7ms | ActiveRecord: 109.2ms | Allocations: 25826)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 20:41:53 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (23.2ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-02 23:41:53.910138"], ["updated_at", "2022-06-02 23:41:53.910138"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/status/2
+Completed 302 Found in 250ms (ActiveRecord: 60.4ms | Allocations: 5130)
+
+
+Started GET "/status/2" for ::1 at 2022-06-02 20:41:54 -0300
+Processing by PagesController#status as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 6.0ms | Allocations: 4991)
+
+
+  
+NameError (undefined local variable or method `id' for #<PagesController:0x0000000000dae8>):
+  
+app/controllers/pages_controller.rb:14:in `status'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 20:51:08 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (20.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 92.7ms | Allocations: 9189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.9ms | Allocations: 354)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 399.1ms | Allocations: 19008)
+Completed 200 OK in 1035ms (Views: 404.5ms | ActiveRecord: 280.1ms | Allocations: 33687)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 20:51:17 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (27.5ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-02 23:51:17.064884"], ["updated_at", "2022-06-02 23:51:17.064884"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (95.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/loan_proposals/3
+Completed 302 Found in 214ms (ActiveRecord: 138.8ms | Allocations: 5133)
+
+
+Started GET "/loan_proposals/3" for ::1 at 2022-06-02 20:51:17 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 3.5ms | Allocations: 4111)
+
+
+  
+NameError (uninitialized constant LoanProposalsController::Loan_proposal):
+  
+app/controllers/loan_proposals_controller.rb:47:in `set_loan_proposal'
+app/controllers/loan_proposals_controller.rb:27:in `show'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 20:55:48 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 197.0ms | Allocations: 9380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 25.1ms | Allocations: 718)
+  Rendered shared/_flashes.html.erb (Duration: 21.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 754.9ms | Allocations: 20245)
+Completed 200 OK in 1558ms (Views: 988.5ms | ActiveRecord: 207.5ms | Allocations: 33928)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 20:55:53 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (23.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (21.7ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-02 23:55:53.735068"], ["updated_at", "2022-06-02 23:55:53.735068"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (24.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/loan_proposals/4
+Completed 302 Found in 288ms (ActiveRecord: 76.5ms | Allocations: 5154)
+
+
+Started GET "/loan_proposals/4" for ::1 at 2022-06-02 20:55:53 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 16.4ms | Allocations: 4111)
+
+
+  
+NameError (uninitialized constant LoanProposalsController::Loan_proposal):
+  
+app/controllers/loan_proposals_controller.rb:45:in `set_loan_proposal'
+app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 21:37:13 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (9.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 120.5ms | Allocations: 9189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.0ms | Allocations: 354)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 636.6ms | Allocations: 19008)
+Completed 200 OK in 1882ms (Views: 642.1ms | ActiveRecord: 824.6ms | Allocations: 33688)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 21:37:19 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (156.3ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-03 00:37:19.517169"], ["updated_at", "2022-06-03 00:37:19.517169"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (67.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/loan_proposals/5
+Completed 302 Found in 356ms (ActiveRecord: 242.4ms | Allocations: 5133)
+
+
+Started GET "/loan_proposals/5" for ::1 at 2022-06-02 21:37:19 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 53ms (ActiveRecord: 8.6ms | Allocations: 2061)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: loan_proposal
+Did you mean?  controller
+               action
+               id):
+  
+app/controllers/loan_proposals_controller.rb:49:in `loan_proposal_params'
+app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/loan_proposals/5" for ::1 at 2022-06-02 21:40:10 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 363ms (ActiveRecord: 219.5ms | Allocations: 8438)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: loan_proposal
+Did you mean?  controller
+               action
+               id):
+  
+app/controllers/loan_proposals_controller.rb:50:in `loan_proposal_params'
+app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/loan_proposals/5" for ::1 at 2022-06-02 21:40:50 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 249ms (ActiveRecord: 38.2ms | Allocations: 8244)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: loan_proposal
+Did you mean?  controller
+               action
+               id):
+  
+app/controllers/loan_proposals_controller.rb:49:in `loan_proposal_params'
+app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 21:42:33 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 579.6ms | Allocations: 9194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 54.7ms | Allocations: 354)
+  Rendered shared/_flashes.html.erb (Duration: 6.8ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 1425.9ms | Allocations: 19015)
+Completed 200 OK in 2257ms (Views: 1458.7ms | ActiveRecord: 189.3ms | Allocations: 31760)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 21:42:41 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"24x", "description"=>"kjdasdfhoufhOEFHJNCAJNUFHUEu"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (33.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (60.5ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "24x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-03 00:42:41.853839"], ["updated_at", "2022-06-03 00:42:41.853839"], ["description", "kjdasdfhoufhOEFHJNCAJNUFHUEu"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/loan_proposals/6
+Completed 302 Found in 475ms (ActiveRecord: 145.1ms | Allocations: 5136)
+
+
+Started GET "/loan_proposals/6" for ::1 at 2022-06-02 21:42:42 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (45.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 400 Bad Request in 119ms (ActiveRecord: 45.5ms | Allocations: 2038)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: loan_proposal
+Did you mean?  controller
+               action
+               id):
+  
+app/controllers/loan_proposals_controller.rb:50:in `loan_proposal_params'
+app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/loan_proposals/6" for ::1 at 2022-06-02 21:46:53 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 88.7ms | Allocations: 9882)
+
+
+  
+NameError (uninitialized constant LoanProposalsController::Loan_proposal):
+  
+app/controllers/loan_proposals_controller.rb:45:in `set_loan_proposal'
+app/controllers/loan_proposals_controller.rb:26:in `show'
