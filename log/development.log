@@ -4622,3 +4622,608 @@ NameError (uninitialized constant LoanProposalsController::Loan_proposal):
   
 app/controllers/loan_proposals_controller.rb:45:in `set_loan_proposal'
 app/controllers/loan_proposals_controller.rb:26:in `show'
+Started GET "/" for ::1 at 2022-06-02 22:23:57 -0300
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.0ms | Allocations: 290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (34.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 226.8ms | Allocations: 8353)
+  Rendered shared/_flashes.html.erb (Duration: 23.3ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 774.9ms | Allocations: 47450)
+Completed 200 OK in 968ms (Views: 703.4ms | ActiveRecord: 102.9ms | Allocations: 52027)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:24:06 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 6)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 25.7ms | Allocations: 1722)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 156.3ms | Allocations: 11065)
+Completed 200 OK in 163ms (Views: 154.9ms | ActiveRecord: 4.6ms | Allocations: 11653)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:24:17 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 50.0ms | Allocations: 1521)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 203.9ms | Allocations: 10541)
+Completed 200 OK in 212ms (Views: 197.4ms | ActiveRecord: 9.5ms | Allocations: 11021)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:24:19 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 39.7ms | Allocations: 1521)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 194.6ms | Allocations: 10541)
+Completed 200 OK in 203ms (Views: 184.6ms | ActiveRecord: 14.5ms | Allocations: 11021)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:24:27 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:13
+  Rendered shared/_navbar.html.erb (Duration: 17.8ms | Allocations: 1508)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 187.8ms | Allocations: 11123)
+Completed 200 OK in 209ms (Views: 185.9ms | ActiveRecord: 5.0ms | Allocations: 11601)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:24:36 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 769.8ms | Allocations: 18947)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.6ms | Allocations: 358)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 890.0ms | Allocations: 29086)
+Completed 200 OK in 1152ms (Views: 896.3ms | ActiveRecord: 49.6ms | Allocations: 37583)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 22:24:57 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"12x", "description"=>"lkdjflsidfosilrtlkserlieruoqwierudkflskfjsid"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mLoanProposal Create (533.2ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "12x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-03 01:24:57.644446"], ["updated_at", "2022-06-03 01:24:57.644446"], ["description", "lkdjflsidfosilrtlkserlieruoqwierudkflskfjsid"]]
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (33.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:11:in `create'
+Redirected to http://localhost:3000/loan_proposals/7
+Completed 302 Found in 739ms (ActiveRecord: 573.1ms | Allocations: 6805)
+
+
+Started GET "/loan_proposals/7" for ::1 at 2022-06-02 22:24:58 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 93)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 11.3ms | Allocations: 359)
+  Rendered shared/_flashes.html.erb (Duration: 1.0ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 184.7ms | Allocations: 9781)
+Completed 500 Internal Server Error in 220ms (Views: 189.4ms | ActiveRecord: 5.5ms | Allocations: 12334)
+
+
+  
+Pundit::AuthorizationNotPerformedError (LoanProposalsController):
+  
+pundit (2.2.0) lib/pundit/authorization.rb:38:in `verify_authorized'
+activesupport (6.1.6) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.6) lib/active_support/callbacks.rb:235:in `block in halting_and_conditional'
+activesupport (6.1.6) lib/active_support/callbacks.rb:516:in `block in invoke_after'
+activesupport (6.1.6) lib/active_support/callbacks.rb:516:in `each'
+activesupport (6.1.6) lib/active_support/callbacks.rb:516:in `invoke_after'
+activesupport (6.1.6) lib/active_support/callbacks.rb:131:in `block in run_callbacks'
+actiontext (6.1.6) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.6) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.6) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.6) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.6) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.6) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.6) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.6) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.6) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.6) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3.1) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.6) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3.1) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.6) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/loan_proposals/7" for ::1 at 2022-06-02 22:31:50 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 845ms (ActiveRecord: 328.9ms | Allocations: 12494)
+
+
+  
+NameError (uninitialized constant LoanProposalsController::Loan_proposal):
+  
+app/controllers/loan_proposals_controller.rb:47:in `set_loan_proposal'
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:31:57 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 260.6ms | Allocations: 10001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 22.7ms | Allocations: 718)
+  Rendered shared/_flashes.html.erb (Duration: 18.3ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 708.3ms | Allocations: 21107)
+Completed 200 OK in 1169ms (Views: 756.3ms | ActiveRecord: 13.2ms | Allocations: 28355)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 22:32:23 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"10000", "conditions"=>"12x", "description"=>"lkdjflsidfosilrtlkserlieruoqwierudkflskfjsid"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mLoanProposal Create (43.4ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "12x"], ["amount", 10000.0], ["user_id", 1], ["created_at", "2022-06-03 01:32:23.626113"], ["updated_at", "2022-06-03 01:32:23.626113"], ["description", "lkdjflsidfosilrtlkserlieruoqwierudkflskfjsid"]]
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (36.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/loan_proposals/8
+Completed 302 Found in 287ms (ActiveRecord: 93.9ms | Allocations: 5134)
+
+
+Started GET "/loan_proposals/8" for ::1 at 2022-06-02 22:32:23 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 5.5ms | Allocations: 4095)
+
+
+  
+NameError (uninitialized constant LoanProposalsController::Loan_proposal):
+  
+app/controllers/loan_proposals_controller.rb:47:in `set_loan_proposal'
+Started GET "/loan_proposals/8" for ::1 at 2022-06-02 22:33:44 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (6.9ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:47:in `set_loan_proposal'
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 28.7ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 15.2ms | Allocations: 399)
+  Rendered shared/_flashes.html.erb (Duration: 0.9ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 286.3ms | Allocations: 10290)
+Completed 200 OK in 736ms (Views: 293.6ms | ActiveRecord: 153.6ms | Allocations: 24365)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-06-02 22:34:21 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 151ms (ActiveRecord: 8.9ms | Allocations: 3385)
+
+
+Started GET "/" for ::1 at 2022-06-02 22:34:21 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 22.1ms | Allocations: 95)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 12.3ms | Allocations: 332)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 197.8ms | Allocations: 9686)
+Completed 200 OK in 219ms (Views: 209.8ms | ActiveRecord: 0.0ms | Allocations: 11123)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-06-02 22:34:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 32.5ms | Allocations: 656)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 254.3ms | Allocations: 11341)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.1ms | Allocations: 188)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 378.3ms | Allocations: 20652)
+Completed 200 OK in 514ms (Views: 430.2ms | ActiveRecord: 0.0ms | Allocations: 23602)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-06-02 22:34:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tamara@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (42.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tamara@mail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2259ms (ActiveRecord: 42.5ms | Allocations: 5207)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 22:34:47 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (8.8ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 22.8ms | Allocations: 1215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.3ms | Allocations: 343)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 118.2ms | Allocations: 10757)
+Completed 200 OK in 353ms (Views: 112.9ms | ActiveRecord: 45.8ms | Allocations: 18073)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:35:04 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 237.7ms | Allocations: 9136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.6ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 468.0ms | Allocations: 18359)
+Completed 200 OK in 683ms (Views: 492.2ms | ActiveRecord: 24.3ms | Allocations: 20413)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 22:38:04 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (23.7ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 239.0ms | Allocations: 5457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 27.0ms | Allocations: 723)
+  Rendered shared/_flashes.html.erb (Duration: 7.7ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 528.1ms | Allocations: 16178)
+Completed 200 OK in 1016ms (Views: 493.6ms | ActiveRecord: 200.2ms | Allocations: 30245)
+
+
+Started GET "/loan_proposals/1" for ::1 at 2022-06-02 22:38:18 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (103.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (26.1ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:47:in `set_loan_proposal'
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 129.9ms | Allocations: 3930)
+
+
+  
+RuntimeError ():
+  
+app/controllers/loan_proposals_controller.rb:27:in `show'
+Started PUT "/__web_console/repl_sessions/d7f970efaa156d601882d133cd0a1153" for ::1 at 2022-06-02 22:39:03 -0300
+Started PUT "/__web_console/repl_sessions/d7f970efaa156d601882d133cd0a1153" for ::1 at 2022-06-02 22:39:06 -0300
+Started PUT "/__web_console/repl_sessions/d7f970efaa156d601882d133cd0a1153" for ::1 at 2022-06-02 22:39:19 -0300
+Started GET "/users/1" for ::1 at 2022-06-02 22:39:32 -0300
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (8.0ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 111.5ms | Allocations: 5290)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | Allocations: 359)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 240.9ms | Allocations: 15171)
+Completed 200 OK in 710ms (Views: 209.0ms | ActiveRecord: 123.5ms | Allocations: 30183)
+
+
+Started GET "/loan_proposals/1" for ::1 at 2022-06-02 22:39:36 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (14.2ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:46:in `set_loan_proposal'
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 6.5ms | Allocations: 395)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 141.7ms | Allocations: 9725)
+Completed 200 OK in 262ms (Views: 152.6ms | ActiveRecord: 20.6ms | Allocations: 14703)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:40:14 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 197.0ms | Allocations: 9319)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.9ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 357.5ms | Allocations: 18817)
+Completed 200 OK in 500ms (Views: 371.5ms | ActiveRecord: 12.3ms | Allocations: 21157)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 22:40:23 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (10.8ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 31.2ms | Allocations: 1153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.8ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 211.2ms | Allocations: 10818)
+Completed 200 OK in 259ms (Views: 204.1ms | ActiveRecord: 19.1ms | Allocations: 12738)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-02 22:40:27 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.7ms | Allocations: 360)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 127.0ms | Allocations: 10171)
+Completed 200 OK in 193ms (Views: 144.9ms | ActiveRecord: 5.1ms | Allocations: 13446)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-02 22:40:43 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | Allocations: 324)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 329.1ms | Allocations: 10036)
+Completed 200 OK in 519ms (Views: 351.5ms | ActiveRecord: 9.2ms | Allocations: 12188)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:40:57 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 227.3ms | Allocations: 9071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 5.1ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 407.4ms | Allocations: 18294)
+Completed 200 OK in 511ms (Views: 412.1ms | ActiveRecord: 16.7ms | Allocations: 20215)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 22:41:13 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (13.3ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 32.2ms | Allocations: 1145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.4ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 219.7ms | Allocations: 10810)
+Completed 200 OK in 301ms (Views: 214.6ms | ActiveRecord: 30.0ms | Allocations: 12726)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-02 22:41:21 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 3.0ms | Allocations: 324)
+  Rendered shared/_flashes.html.erb (Duration: 1.5ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 178.9ms | Allocations: 10025)
+Completed 200 OK in 223ms (Views: 190.7ms | ActiveRecord: 5.2ms | Allocations: 11949)
+
+
+Started GET "/loan_proposals/new.1" for ::1 at 2022-06-02 22:41:25 -0300
+Processing by LoanProposalsController#new as */*
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 261.2ms | Allocations: 8936)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.8ms | Allocations: 322)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 397.5ms | Allocations: 18321)
+Completed 200 OK in 499ms (Views: 406.4ms | ActiveRecord: 19.8ms | Allocations: 20243)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-02 22:42:33 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 21.8ms | Allocations: 728)
+  Rendered shared/_flashes.html.erb (Duration: 1.8ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 298.4ms | Allocations: 10880)
+Completed 200 OK in 368ms (Views: 322.9ms | ActiveRecord: 5.0ms | Allocations: 13793)
+
+
+Started GET "/users/1/addresses/new" for ::1 at 2022-06-02 22:42:37 -0300
+Processing by AddressesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | Allocations: 324)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 165.3ms | Allocations: 9609)
+Completed 200 OK in 232ms (Views: 169.5ms | ActiveRecord: 9.3ms | Allocations: 11757)
+
+
+Started GET "/users/1" for ::1 at 2022-06-02 22:42:43 -0300
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering pages/profile.html.erb within layouts/application
+  [1m[36mLoanProposal Load (24.3ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals"[0m
+  ↳ app/views/pages/profile.html.erb:4
+  Rendered pages/profile.html.erb within layouts/application (Duration: 66.5ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 9.8ms | Allocations: 356)
+  Rendered shared/_flashes.html.erb (Duration: 1.6ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 353.9ms | Allocations: 12029)
+Completed 200 OK in 444ms (Views: 345.2ms | ActiveRecord: 33.3ms | Allocations: 14660)
+
+
+Started GET "/loan_proposals/new" for ::1 at 2022-06-02 22:42:47 -0300
+Processing by LoanProposalsController#new as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/new.html.erb within layouts/application
+  Rendered loan_proposals/new.html.erb within layouts/application (Duration: 151.2ms | Allocations: 9372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 351)
+  Rendered shared/_flashes.html.erb (Duration: 0.4ms | Allocations: 32)
+  Rendered layout layouts/application.html.erb (Duration: 249.3ms | Allocations: 18837)
+Completed 200 OK in 351ms (Views: 294.5ms | ActiveRecord: 7.2ms | Allocations: 22436)
+
+
+Started POST "/loan_proposals" for ::1 at 2022-06-02 22:43:14 -0300
+Processing by LoanProposalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "loan_proposal"=>{"amount"=>"51000", "conditions"=>"48x", "description"=>"mnasdjoauouhasda"}, "commit"=>"Create Loan proposal"}
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mLoanProposal Create (9.3ms)[0m  [1m[32mINSERT INTO "loan_proposals" ("conditions", "amount", "user_id", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["conditions", "48x"], ["amount", 51000.0], ["user_id", 1], ["created_at", "2022-06-03 01:43:14.512050"], ["updated_at", "2022-06-03 01:43:14.512050"], ["description", "mnasdjoauouhasda"]]
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (29.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/loan_proposals_controller.rb:12:in `create'
+Redirected to http://localhost:3000/loan_proposals/9
+Completed 302 Found in 222ms (ActiveRecord: 65.2ms | Allocations: 5117)
+
+
+Started GET "/loan_proposals/9" for ::1 at 2022-06-02 22:43:14 -0300
+Processing by LoanProposalsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLoanProposal Load (8.7ms)[0m  [1m[34mSELECT "loan_proposals".* FROM "loan_proposals" WHERE "loan_proposals"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/loan_proposals_controller.rb:46:in `set_loan_proposal'
+  Rendering layout layouts/application.html.erb
+  Rendering loan_proposals/show.html.erb within layouts/application
+  Rendered loan_proposals/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 2.9ms | Allocations: 336)
+  Rendered shared/_flashes.html.erb (Duration: 0.6ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 9755)
+Completed 200 OK in 212ms (Views: 138.5ms | ActiveRecord: 15.5ms | Allocations: 12450)
+
+

@@ -1,4 +1,5 @@
 class LoanProposalsController < ApplicationController
+  before_action :set_loan_proposal, only: [:show, :edit, :update, :destroy]
 
   def new
     @loan_proposal = LoanProposal.new
@@ -23,7 +24,7 @@ class LoanProposalsController < ApplicationController
   end
 
   def show
-
+    authorize @loan_proposal
   end
 
   def edit
@@ -42,7 +43,7 @@ class LoanProposalsController < ApplicationController
   private
 
   def set_loan_proposal
-    @loan_proposal = Loan_proposal.find(params[:id])
+    @loan_proposal = LoanProposal.find(params[:id])
   end
 
   def loan_proposal_params
