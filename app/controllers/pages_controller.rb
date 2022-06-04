@@ -9,5 +9,5 @@ class PagesController < ApplicationController
     @address = Address.new
     @loan_proposals = LoanProposal.all
   end
-
+ #comentario
 end

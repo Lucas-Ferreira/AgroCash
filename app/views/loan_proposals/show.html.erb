@@ -3,6 +3,7 @@
 <%= @loan_proposal.conditions %>
 <%= @loan_proposal.description %>
 <%= @loan_proposal.accepted %>
+<%= link_to 'Voltar para Home', user_profile_path %>
 
 <% if current_user != 'farmer' %>
   <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal) %>
