@@ -9343,3 +9343,32 @@ Processing by LoanProposalsController#new as */*
 Completed 200 OK in 349ms (Views: 284.1ms | ActiveRecord: 14.6ms | Allocations: 21771)
 
 
+Started GET "/" for ::1 at 2022-06-04 10:21:12 -0300
+  [1m[35m (94.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /home/zoppa/code/TamaraToyota/AgroCash/app/controllers/application_controller.rb:3)
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 44.6ms | Allocations: 379)
+Started GET "/" for ::1 at 2022-06-04 10:21:18 -0300
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.9ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 35.6ms | Allocations: 629)
+  Rendered shared/_flashes.html.erb (Duration: 36.3ms | Allocations: 196)
+  Rendered shared/_footer.html.erb (Duration: 3.4ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 155843.6ms | Allocations: 196164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navbar.html.erb (Duration: 4.4ms | Allocations: 264)
+  Rendered shared/_flashes.html.erb (Duration: 0.5ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layout layouts/application.html.erb (Duration: 159731.5ms | Allocations: 231145)
+Completed 200 OK in 156136ms (Views: 155851.9ms | ActiveRecord: 0.0ms | Allocations: 203879)
+
+
+Completed 200 OK in 160180ms (Views: 159790.8ms | ActiveRecord: 0.0ms | Allocations: 235841)
+
+
