@@ -9,8 +9,9 @@ class LoanProposalsController < ApplicationController
   def create
     @loan_proposal = LoanProposal.new(loan_proposal_params)
     @loan_proposal.user = current_user
+    @loan_proposal.accepted = "Enviado"
     if @loan_proposal.save
-      redirect_to loan_proposreal_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
+      redirect_to loan_proposal_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
     else
       render :new
     end
