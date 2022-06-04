@@ -7,11 +7,19 @@ class AddressesController < ApplicationController
 
   def new
     @address = Address.new
+    @user = current_user
     authorize @address
   end
 
   def create
-
+    @address = Address.new(address_params)
+    authorize @address
+    @address.user = current_user
+    if @address.save!
+      redirect_to user_profile_path(current_user)
+    else
+      render :new
+    end
   end
 
   def show
@@ -33,6 +41,6 @@ private
   end
 
   def address_params
-    params.require(:address).permit(:city, :street, :numer, :neighborhood, :cep)
+    params.require(:address).permit(:city, :street, :number, :neighborhood, :cep)
   end
 end
