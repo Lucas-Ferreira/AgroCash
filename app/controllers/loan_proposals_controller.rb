@@ -10,14 +10,20 @@ class LoanProposalsController < ApplicationController
     @loan_proposal = LoanProposal.new(loan_proposal_params)
     @loan_proposal.user = current_user
     if @loan_proposal.save
-      redirect_to loan_proposal_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
+      redirect_to loan_proposreal_path(@loan_proposal), notice: "Proposta de empréstimo realizada com sucesso"
     else
       render :new
     end
     authorize @loan_proposal
   end
 
-
+  def accept
+    @loan_proposal = LoanProposal.find(params[:id])
+    @loan_proposal.accepted = 'Aceito'
+    @loan_proposal.save
+    redirect_to user_profile_path, notice: "Proposta aceita com sucesso!"
+    authorize @loan_proposal
+  end
 
   def index
     @loan_proposals = policy_scope(LoanProposal)
@@ -34,7 +40,6 @@ class LoanProposalsController < ApplicationController
     @loan_proposal.update(loan_proposal_params)
     redirect_to loan_proposal_path(@loan_proposal)
     authorize @loan_proposal
-
   end
 
   def destroy

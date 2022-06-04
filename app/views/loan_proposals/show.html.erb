@@ -1,5 +1,9 @@
 <h1>Proposta de empréstimo</h1>
-<% @loan_proposal.amount %>
+<p><%= @loan_proposal.amount %></p>
 <%= @loan_proposal.conditions %>
 <%= @loan_proposal.description %>
 <%= @loan_proposal.accepted %>
+
+<% if current_user != 'farmer' %>
+  <%= link_to 'Aceitar Proposta', accept_loan_path(@loan_proposal) %>
+<% end %>
