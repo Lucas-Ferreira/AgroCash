@@ -10,5 +10,4 @@ class PagesController < ApplicationController
     @loan_proposals = LoanProposal.all
   end
 
-
 end
