@@ -1,3 +1,17 @@
-<h1> Profile Page</h1>
-<%= link_to 'New Address', new_user_address_path(current_user.id) %>
-<%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path(current_user.id) %>
+<div class="container mt-5">
+  <% if current_user.role == 'farmer' %>
+  <h1> Profile Page</h1>
+    <%= link_to 'New Address', new_user_address_path(current_user.id) %>
+    <%= link_to 'Criar pedido de empréstimo', new_loan_proposal_path %>
+    <% @loan_proposals.each do |proposal| %>
+      <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal) %>
+    <% end %>
+  <% else %>
+    <% @loan_proposals.each do |proposal| %>
+      <p><%= proposal.amount %></p>
+      <p><%= proposal.conditions %></p>
+      <p><%= proposal.accepted %></p>
+      <%= link_to 'Detalhes da Proposta', loan_proposal_path(proposal) %>
+    <% end %>
+  <% end %>
+</div>
